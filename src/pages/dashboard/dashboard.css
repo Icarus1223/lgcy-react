@@ -1,0 +1,157 @@
+/* top bar css start here */
+.top-bar {
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    top: 0;
+    z-index: 999;
+}
+.search-bar-form {
+    padding: 18px 0 40px;
+}
+.search-bar-form form{
+    position: relative;
+    max-width: 375px;
+    margin: 0 auto;
+}
+.search-bar-form form input {
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.50);
+    background: rgba(255, 255, 255, 0.50);
+    padding-left: 45px;
+    color: rgba(0, 0, 0, 0.50);
+    text-align: center;
+    font-size: 16px;
+    line-height: normal;
+    font-family: 'Montserrat';
+    font-size: 18px;
+}
+.search-bar-form .search-icon{
+    position: absolute;
+    top: 3px;
+    left: 10px;
+}
+.search-bar-form .search-icon img.searchicon {
+    width: 20px;
+}
+/* top bar css end here */
+
+
+/* sidebar css start here */
+.left-side-bar .site-logo img.logo {
+    width: 100px;
+}
+.left-side-bar .sidebar-menu {
+    margin-top: 50px;
+}
+.left-side-bar .sidebar-menu nav a img {
+    margin-right: 20px;
+    width: 25px;
+}
+.left-side-bar .sidebar-menu a.navbar-brand {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    align-items: center;
+    display: flex;
+}
+/* sidebar css end here */
+
+.content-outer {
+    position: relative;
+    margin-top: 100px;
+}
+
+/* dashboard page css start here */
+.all-destinations-lists .single-destination-outer .destination-name-slog h4 {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 0;
+    text-align: start;
+}
+.all-destinations-lists .single-destination-outer .destination-name-slog span {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.left-side-bar .sidebar-menu .Active a.navbar-brand{
+font-weight: 600;
+}
+.main-content .destination-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.main-content .all-destinations-lists {
+    max-width: 475px;
+    margin: 50px auto 20px;
+}
+  .main-content .all-destinations-lists::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  }
+   
+  .main-content .all-destinations-lists::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #a9acad;
+  }
+  .main-content .all-destinations-lists::-webkit-scrollbar{
+    width: 8px;
+  }
+.menu-bar-row {
+    top: 0;
+    width: 214px;
+    position: fixed;
+    margin-top: 100px
+}
+.all-destinations-lists .single-destination-outer .destination-name-slog{
+    padding-top:10px;
+}
+.single-destination-outer {
+    margin-bottom: 30px;
+}
+/* dashboard page css start here */
+
+/*notification page css start here */
+.all-notifications-lists h3 {
+    font-family: 'Montserrat';
+    font-size: 30px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 40px;
+}
+.notifications-content-area {
+    max-width: 475px;
+    margin:50px auto 0;
+}
+.single-notification {
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 20px;
+}
+.single-notification .user-profile-pic img.searchicon {
+    border-radius: 100px;
+}
+.single-notification .user-activity-on-post h6 {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    margin-bottom:0;
+    text-align: start;
+}
+.single-notification .user-activity-on-post h6 span{
+    font-weight: 600;
+}
+
+
+/* notification page css end here */
+
+@media (min-width: 992px){
+.sidebar-menu .navbar-expand-lg .navbar-nav {
+    flex-direction: column;
+}
+}
