@@ -1,33 +1,118 @@
 .signin-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 50px;
-    gap: 70px;
-    padding: 0px 100px;
+    padding: 20px 0 50px;
+}
+.sign-in-row{
+  align-items: center;
+  justify-content: center;
+}
+.signin-form .input-field input {
+    margin-bottom: 25px;
+    padding: 10px;
+    font-size: 18px;
+    background: #F9F9F9;
+    border: none;
+    color: #000;
   }
-  
-  .signin-form {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
+.signin-form .input-field input::placeholder{
+    color:#000;
+    text-align: center;
+    font-size: 18px;
   }
-  
-  .signin-form input {
-    margin-bottom: 10px;
-    padding: 5px;
-    font-size: 14px;
+.signin-left {
+    max-width: 373px;
+    padding-bottom: 50px;
+}
+button.sign-in-btn {
+  width: 100%;
+  background: #000;
+  border: none;
+  padding: 10px;
+  line-height: initial;
+  font-size: 18px;
+}
+button.sign-in-btn a{
+  color:#fff;
+  text-decoration:none;
+}
+.signin-form .input-field input:focus{
+  box-shadow: none;
+}
+button.sign-in-btn:hover{
+  background-color: #000;
+}
+.signin-left .logo {
+    width: 60%;
+    margin-bottom: 50px;
   }
-  
-  .signin-form button {
-    padding: 8px 16px;
-    font-size: 16px;
+  .signin-right .share-story-text h1 {
+    font-size: 100px;
+    line-height:100px;
+    font-family: 'Montaga';
+}
+.download-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  /* padding: 22px 0 0px; */
+}
+.download-buttons img {
+  width: 200px;
+}
+@media(max-width:1200px){
+  .signin-right .share-story-text h1 br{
+    display: none;
   }
-
-  .signin-form .logo {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  .signin-right .logo{
-    width: 100%;
-  }
+}
+@media(max-width:1024px){
+  .signin-right .share-story-text h1 {
+    font-size: 70px;
+    line-height: 70px;
+}
+.signin-left .logo {
+    width: 50%;
+}
+.signin-right .share-story-text h1 br{
+  display: block;
+}
+}
+@media(max-width:992px){
+  .signin-left {
+    max-width: 100%;
+}
+.signin-left .logo {
+  width: 25%;
+}
+.signin-right .share-story-text h1 br {
+  display: none;
+}
+.download-buttons{
+  padding:30px 0 0;
+}
+}
+@media(max-width:768px){
+  .signin-right .share-story-text h1 {
+    font-size: 34px;
+    line-height: 34px;
+}
+.footer-links a{
+  font-size: 14px;
+}
+.download-buttons img {
+  width: 140px;
+}
+.signin-left .logo{
+  margin-bottom:20px;
+}
+.signin-form .input-field input::placeholder{
+font-size: 14px;
+}
+.signin-form .input-field input{
+  font-size: 14px;
+}
+.signin-left{
+  padding-bottom:20px;
+}
+.download-buttons {
+  padding: 20px 0 0;
+}
+}

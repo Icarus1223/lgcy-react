@@ -2,9 +2,17 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import './signin.css';
 import logo from '../../../assets/images/logo.png'; 
+import playstore from '../../../assets/images/play-store.png'; 
+import appstore from '../../../assets/images/app-store.png'; 
 import ShareYourStory from '../../../assets/images/ShareYourStory.png'
 import { setUsername, setPassword, resetForm } from '../../../redux/actions/signinActions';
 import Footer from '../../footer/footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Row, Col } from 'react-bootstrap'; // Import Container, Row, and Col components
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import '../../../../src/fonts/fonts.css'; // Import the custom fonts CSS file
+import { Link } from 'react-router-dom';
 
 const Signin: React.FC = () => {
   const { username, password } = useSelector((state: any) => state.signin);
@@ -27,16 +35,56 @@ const Signin: React.FC = () => {
   };
 
   return (<>
+  
     <div className="signin-container">
-      <form className="signin-form" onSubmit={handleSubmit}>
-        <img src={logo} alt="Logo" className="logo" />
+    <Container>
+      <Row className="sign-in-row">
+        <Col  lg={6}>
+        <div className="signin-left">
+          <div className="signin-logo">
+          <img src={logo} alt="Logo" className="logo" />
+          </div>
+        {/* <form className="signin-form" onSubmit={handleSubmit}>
+        
         <input type="text" placeholder="Username" value={username} onChange={handleUsernameChange} />
         <input type="password" placeholder="Password" value={password} onChange={handlePasswordChange} />
         <button type="submit">Sign In</button>
-      </form>
-      <div className="signin-right">
-      <img src={ShareYourStory} alt="Logo" className="logo" />
+      </form> */}
+      <div className="signin-form">
+      <Form>
+      <Form.Group className="mb-3 input-field" controlId="formGroupEmail">
+        <Form.Control type="email" placeholder="Enter or username" />
+      </Form.Group>
+      <Form.Group className="mb-3 input-field" controlId="formGroupPassword">
+        <Form.Control type="password" placeholder="Password" />
+      </Form.Group>
+      <Button variant="primary" className="sign-in-btn">
+      <Link to="/dashboard">Sign In</Link>
+      </Button>
+    </Form>
+    </div>
       </div>
+      </Col>
+        <Col  lg={6}>   
+      <div className="signin-right">
+      <div className="share-story-text">
+        <h1>
+        Share <br />Your  <br />Story
+        </h1>
+        </div>
+      </div>
+      </Col>
+      <Row>
+      <Col>
+<div className="download-buttons">
+<a href="https://example.com"><img src={appstore} alt="Logo" className="app-store"  /></a>
+<a href="https://example.com"><img src={playstore} alt="Logo" className="playstore" /></a>
+</div>
+      </Col>
+      </Row>
+      </Row>
+      </Container>
+ 
     </div>
     <Footer/>
     </>
