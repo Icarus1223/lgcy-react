@@ -58,8 +58,7 @@ const Signin: React.FC = () => {
       <Form.Group className="mb-3 input-field" controlId="formGroupPassword">
         <Form.Control type="password" placeholder="Password" />
       </Form.Group>
-      <Button variant="primary" type="submit" className="sign-in-btn">
-      
+      <Button variant="primary" className="sign-in-btn">
       <Link to="/dashboard">Sign In</Link>
       </Button>
     </Form>
