@@ -35,7 +35,8 @@ const Signin: React.FC = () => {
   };
 
   return (<>
-  
+    <div className="signin-outter">
+    <div className="signin-inner">
     <div className="signin-container">
     <Container>
       <Row className="sign-in-row">
@@ -88,6 +89,8 @@ const Signin: React.FC = () => {
  
     </div>
     <Footer/>
+    </div>
+    </div>
     </>
   );
 };
