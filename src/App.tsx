@@ -5,6 +5,8 @@ import Signin from './pages/auth/signin/signin';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Dashboard from './pages/dashboard/dashboard';
 import Notification from './pages/notification/notification';
+import Profile from './pages/profile/profile';
+import PostDetail from './pages/postdetail/postdetail';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
           <Route path="/" element={<Signin />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/notification" element={<Notification />} />
+          <Route path="/postdetail" element={<PostDetail />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </div>
     </Router>
