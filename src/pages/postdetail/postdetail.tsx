@@ -12,7 +12,7 @@ const PostDetail: React.FC = () => {
         <Container>
           <div className="content-oute1r">
             <Row  className="content-bar-row">
-              <Col xs={12} md={9} lg={12} className="main-content">
+              <Col xs={12} md={12} lg={12} className="main-content">
                   <div className="profile-post-detail">
                   <div className="profile-post-image">
                   <img src={postdetailimg} alt="profile"/>

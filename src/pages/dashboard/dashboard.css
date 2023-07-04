@@ -4,10 +4,11 @@
     width: 100%;
     background: #fff;
     top: 0;
-    z-index: 999;
+    z-index:999;
 }
 .search-bar-form {
     padding: 18px 0 40px;
+    cursor: pointer;
 }
 .search-bar-form form{
     position: relative;
@@ -44,15 +45,29 @@
 .left-side-bar .sidebar-menu {
     margin-top: 50px;
 }
-.left-side-bar .sidebar-menu nav a img {
+.left-side-bar .sidebar-menu nav a{
+    color:#000;
+}
+.left-side-bar .sidebar-menu nav a svg path{
+    fill:#808080;
+}
+.left-side-bar .sidebar-menu nav a svg {
     margin-right: 20px;
     width: 25px;
 }
-.left-side-bar .sidebar-menu a.navbar-brand {
+.left-side-bar .sidebar-menu a.nav-link {
     font-family: 'Montserrat';
     font-size: 18px;
     align-items: center;
     display: flex;
+    margin-bottom: 20px;
+}
+.left-side-bar .sidebar-menu a.active {
+    color: #000;
+    font-weight: 600!important;
+}
+.left-side-bar .sidebar-menu a.active svg path{
+    fill:#000;
 }
 /* sidebar css end here */
 
@@ -73,9 +88,7 @@
     font-size: 16px;
 }
 
-.left-side-bar .sidebar-menu .Active a.navbar-brand{
-font-weight: 600;
-}
+
 .main-content .destination-content {
     display: flex;
     justify-content: space-between;
@@ -393,4 +406,36 @@ font-weight: 600;
 .sidebar-menu .navbar-expand-lg .navbar-nav {
     flex-direction: column;
 }
+}
+@media (max-width: 992px){
+    .top-bar{
+        z-index: 0;
+    }
+    .menu-bar-row{
+        width:100%;
+        right: 0;
+        left: 0;
+        margin-top:0;
+        margin:0;
+    }
+    .sidebar-menu .navbar-collapse {
+        width: 100%;
+        background: #fff;
+        top: 70px;
+        position: absolute;
+    }
+    .menu-bar-row .sidebar{
+width:100%;
+    }
+    .left-side-bar .sidebar-menu {
+        margin-top: 0px;
+    }
+    .left-side-bar {
+        position: relative;
+        flex-flow: column-reverse;
+        display: flex;
+    }
+    .navbar-toggler:focus{
+        box-shadow: none;
+    }
 }
