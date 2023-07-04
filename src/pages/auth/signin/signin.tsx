@@ -35,7 +35,8 @@ const Signin: React.FC = () => {
   };
 
   return (<>
-  
+    <div className="signin-outter">
+    <div className="signin-inner">
     <div className="signin-container">
     <Container>
       <Row className="sign-in-row">
@@ -59,7 +60,7 @@ const Signin: React.FC = () => {
         <Form.Control type="password" placeholder="Password" />
       </Form.Group>
       <Button variant="primary" className="sign-in-btn">
-      <Link to="/dashboard">Sign In</Link>
+      <Link to="/dashboard" className="link-button">Sign In</Link>
       </Button>
     </Form>
     </div>
@@ -87,6 +88,8 @@ const Signin: React.FC = () => {
  
     </div>
     <Footer/>
+    </div>
+    </div>
     </>
   );
 };

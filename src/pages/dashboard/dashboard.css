@@ -4,10 +4,11 @@
     width: 100%;
     background: #fff;
     top: 0;
-    z-index: 999;
+    z-index:999;
 }
 .search-bar-form {
     padding: 18px 0 40px;
+    cursor: pointer;
 }
 .search-bar-form form{
     position: relative;
@@ -44,15 +45,29 @@
 .left-side-bar .sidebar-menu {
     margin-top: 50px;
 }
-.left-side-bar .sidebar-menu nav a img {
+.left-side-bar .sidebar-menu nav a{
+    color:#000;
+}
+.left-side-bar .sidebar-menu nav a svg path{
+    fill:#808080;
+}
+.left-side-bar .sidebar-menu nav a svg {
     margin-right: 20px;
     width: 25px;
 }
-.left-side-bar .sidebar-menu a.navbar-brand {
+.left-side-bar .sidebar-menu a.nav-link {
     font-family: 'Montserrat';
     font-size: 18px;
     align-items: center;
     display: flex;
+    margin-bottom: 20px;
+}
+.left-side-bar .sidebar-menu a.active {
+    color: #000;
+    font-weight: 600!important;
+}
+.left-side-bar .sidebar-menu a.active svg path{
+    fill:#000;
 }
 /* sidebar css end here */
 
@@ -73,9 +88,7 @@
     font-size: 16px;
 }
 
-.left-side-bar .sidebar-menu .Active a.navbar-brand{
-font-weight: 600;
-}
+
 .main-content .destination-content {
     display: flex;
     justify-content: space-between;
@@ -149,9 +162,280 @@ font-weight: 600;
 
 
 /* notification page css end here */
+/*profile page css start here */
+.profile-main {
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+.profil-img-content .prof-img img {
+    width: 60%;
+}
+.profile-main .profile-heading h5 {
+    color: #000;
+    text-align: center;
+    font-size: 18px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.profil-img-content .user-small-info h4.u-name{
+    color: #000;
+    font-size: 18px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal; 
+    text-align: start; 
+    margin-bottom: 20px; 
+}
+.profil-img-content .user-small-info p.u-desc {
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-align: start; 
+}
+.profil-img-content {
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+    gap: 30px;
+}
+.profile-main .single-box .activity-content{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.profile-main .single-box .activity-content p {
+    color: #000;
+    text-align: center;
+    font-size: 20px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 0;
+}
+.profile-main .user-activity-image-box {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    column-gap: 50px;
+    row-gap: 40px;
+
+}
+.profile-main .single-box .activity-image img {
+    border-radius: 13px;
+    max-width: 100%;
+}
+/*profile page css end here */
+
+/* post-detail page css end here */
+
+.profile-post-detail{
+    max-width: 800px;
+    margin: 50px auto 30px;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+}
+.profile-post-detail .profile-post-image img{
+     max-width: 100%;
+}
+.profile-post-detail .profile-post-content h4 {
+    color: #000;
+    font-size: 18px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: start;
+    margin-bottom: 0px;
+}
+.post-threedot-icon button.post-option-button:after{
+    display: none;
+}
+.post-threedot-icon button.post-option-button:active ,
+.post-threedot-icon button.post-option-button.show{
+    border:none;
+}
+    .profile-post-detail .profile-post-content p {
+        color: #000;
+        font-size: 16px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        text-align: start;
+    }
+    .profile-post-detail .post-date-place {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #dfdfdf;
+        padding: 10px;
+    }
+    .profile-post-detail .post-date-place span {
+    color: #000;
+    font-size: 14px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: start;
+}
+.profile-post-content{
+    position:relative;
+}
+.profile-post-content .user-comment-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+    .profile-post-detail .post-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 10px;
+    }
+    .profile-post-detail .post-decr{
+        padding-left: 10px; 
+    }
+    .profile-post-detail .post-caption {
+        padding: 10px;
+    }
+    .profile-post-detail .post-caption h6 {
+        color: #000;
+        font-size: 14px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-align: start;
+        margin-bottom: 0;
+    }
+    .profile-post-detail .post-comment{
+        padding:0 10px 10px;
+        height: 200px;
+        overflow-y: auto;
+    }
+    .profile-post-detail .single-post-comment{
+        text-align: start;
+    }
+    .user-comment-like-outer {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: start;
+        padding: 10px;
+        border-bottom: 1px solid #dfdfdf;
+    }
+    .profile-post-detail .comment-form {
+        padding: 10px 10px 0;
+    }
+    .comment-form .comment-field {
+        position: relative;
+    }
+    .comment-field button.sub-bnt-comnt {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #000;
+        font-size: 14px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-align: start;
+        margin-bottom: 0;
+    }
+    .profile-post-detail .single-post-comment span {
+        color: #000;
+        font-size: 14px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-align: start;
+        margin-bottom: 0;
+    }
+    .user-comment-like-outer span {
+        color: #000;
+        font-size: 18px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-align: start;
+        margin-bottom: 0;
+    }
+    .user-comment-like-outer .like-icon img {
+        width: 18px;
+    }
+    .comment-form .comment-field input{
+        border:none;
+        padding: 0;
+        color: #000;
+        font-size: 14px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-align: start;
+    }
+    .comment-form .comment-field input:focus{
+        box-shadow: none;
+    }
+    .comment-form .comment-field input::placeholder{
+        color: #000;
+        font-size: 14px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-align: start;
+        margin-bottom: 0;
+    }
+/* post-detail page css end here */
 
 @media (min-width: 992px){
 .sidebar-menu .navbar-expand-lg .navbar-nav {
     flex-direction: column;
 }
+}
+@media (max-width: 992px){
+    .top-bar{
+        z-index: 0;
+    }
+    .menu-bar-row{
+        width:100%;
+        right: 0;
+        left: 0;
+        margin-top:0;
+        margin:0;
+    }
+    .sidebar-menu .navbar-collapse {
+        width: 100%;
+        background: #fff;
+        top: 70px;
+        position: absolute;
+    }
+    .menu-bar-row .sidebar{
+width:100%;
+    }
+    .left-side-bar .sidebar-menu {
+        margin-top: 0px;
+    }
+    .left-side-bar {
+        position: relative;
+        flex-flow: column-reverse;
+        display: flex;
+    }
+    .navbar-toggler:focus{
+        box-shadow: none;
+    }
 }

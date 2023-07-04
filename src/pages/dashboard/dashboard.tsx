@@ -12,10 +12,10 @@ import Sidebar from '../sidebar/sidebar';
 const DashBoard: React.FC = () => {
   return (<>
   <Topbar/>
-  <Container fluid>
+  <Container>
     <div className="content-outer">
       <Row  className="content-bar-row">
-        <Col xs={12} md={9} lg={12} className="main-content">
+        <Col xs={12} md={12} lg={12} className="main-content">
          <div className="all-destinations-lists">
             <div className='single-destination-outer'>
                 <div className="destin-img">

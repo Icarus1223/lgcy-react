@@ -9,10 +9,10 @@ import notifpostimage from '../../../src/assets/images/notif-post-image.jpg';
 const Notification: React.FC= () => {
   return (<>
    <Topbar/>
-  <Container fluid>
+  <Container>
     <div className="content-outer">
       <Row  className="content-bar-row">
-        <Col xs={12} md={9} lg={12} className="main-content">
+        <Col xs={12} md={12} lg={12} className="main-content">
         <div className="notifications-content-area">
          <div className="all-notifications-lists">
             <h3>Notifications</h3>

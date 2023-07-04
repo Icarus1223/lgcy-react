@@ -1,6 +1,13 @@
 .signin-container {
     padding: 20px 0 50px;
 }
+.signin-outter {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .sign-in-row{
   align-items: center;
   justify-content: center;
@@ -53,7 +60,7 @@ button.sign-in-btn:hover{
   display: flex;
   gap: 20px;
   justify-content: center;
-  /* padding: 22px 0 0px; */
+  padding: 22px 0 20px;
 }
 .download-buttons img {
   width: 200px;
@@ -61,6 +68,9 @@ button.sign-in-btn:hover{
 @media(max-width:1200px){
   .signin-right .share-story-text h1 br{
     display: none;
+  }
+  .signin-right .share-story-text h1 {
+    font-size: 50px;
   }
 }
 @media(max-width:1024px){
@@ -76,6 +86,13 @@ button.sign-in-btn:hover{
 }
 }
 @media(max-width:992px){
+  .signin-right .share-story-text h1 {
+    font-size: 40px;
+    line-height: 40px;
+}
+.signin-container {
+  padding: 20px 0 20px;
+}
   .signin-left {
     max-width: 100%;
 }
@@ -90,6 +107,7 @@ button.sign-in-btn:hover{
 }
 }
 @media(max-width:768px){
+  
   .signin-right .share-story-text h1 {
     font-size: 34px;
     line-height: 34px;
