@@ -40,7 +40,9 @@ const Signin: React.FC = () => {
     <div className="signin-container">
     <Container>
       <Row className="sign-in-row">
-        <Col  lg={6}>
+      <Col  lg={1}> 
+      </Col>
+        <Col  lg={5}>
         <div className="signin-left">
           <div className="signin-logo">
           <img src={logo} alt="Logo" className="logo" />
@@ -66,7 +68,7 @@ const Signin: React.FC = () => {
     </div>
       </div>
       </Col>
-        <Col  lg={6}>   
+        <Col  lg={5}>   
       <div className="signin-right">
       <div className="share-story-text">
         <h1>
@@ -75,8 +77,11 @@ const Signin: React.FC = () => {
         </div>
       </div>
       </Col>
+      <Col  lg={1}> 
+      </Col>
       <Row>
       <Col>
+     
 <div className="download-buttons">
 <a href="https://example.com"><img src={appstore} alt="Logo" className="app-store"  /></a>
 <a href="https://example.com"><img src={playstore} alt="Logo" className="playstore" /></a>

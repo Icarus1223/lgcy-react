@@ -77,41 +77,89 @@
 }
 
 /* dashboard page css start here */
-.all-destinations-lists .single-destination-outer .destination-name-slog h4 {
+.content-outer h1 ,.content-outer h2 , .content-outer h3 , .content-outer h4
+, .content-outer h5 , .content-outer h6 ,  .content-outer span , .content-outer p{
+    font-family: 'Montserrat';
+}
+.all-feeds-lists .single-feed-outer .feed-name-slog h4 {
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 0;
     text-align: start;
 }
-.all-destinations-lists .single-destination-outer .destination-name-slog span {
+.all-feeds-lists .single-feed-outer .feed-name-slog span {
     font-weight: 400;
     font-size: 16px;
 }
 
 
-.main-content .destination-content {
+.all-feeds-lists .feed-likes {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 10px 10px 0px;
+    gap:10px;
 }
-.main-content .all-destinations-lists {
+.all-feeds-lists .feed-likes .like-icon svg path {
+    fill: red;
+    stroke: red;
+}
+.all-feeds-lists .feed-caption-outer {
+    padding: 10px 10px 0;
+    display: flex;
+    gap:10px;
+}
+.all-feeds-lists .feed-uname h4 {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 0;
+    text-align: start;
+    color: #000;    
+    line-height: 24px;
+
+}
+.feed-comment-outer .feed-comment {
+    padding: 0 10px 0px;
+    display: flex;
+    gap: 10px;
+}
+.feed-comment-outer .feed-comment.feed-post-date {
+    padding:0 10px 10px;
+}
+.more-comment a {
+    color: #000;
+}
+.feed-form.comment-form{
+    padding:10px;
+    border-top:1px solid #dfdfdf;
+}
+.all-feeds-lists .single-feed-outer .feed-likes .feed-name-slog{
+    padding: 0;
+}
+.all-feeds-lists .feed-caption p {
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 0;
+    text-align: start;
+    color: #000;
+}
+.main-content .all-feeds-lists {
     max-width: 475px;
     margin: 50px auto 20px;
+    padding: 5px 0;
 }
-  .main-content .all-destinations-lists::-webkit-scrollbar-track {
+  .main-content .all-feeds-lists::-webkit-scrollbar-track {
     border-radius: 8px;
     background-color: #fff;
     border: 1px solid #fff;
     box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
   }
    
-  .main-content .all-destinations-lists::-webkit-scrollbar-thumb {
+  .main-content .all-feeds-lists::-webkit-scrollbar-thumb {
     border-radius: 8px;
     background-color: #a9acad;
   }
-  .main-content .all-destinations-lists::-webkit-scrollbar{
+  .main-content .all-feeds-lists::-webkit-scrollbar{
     width: 8px;
   }
 .menu-bar-row {
@@ -120,11 +168,21 @@
     position: fixed;
     margin-top: 100px
 }
-.all-destinations-lists .single-destination-outer .destination-name-slog{
-    padding-top:10px;
+.all-feeds-lists .single-feed-outer .feed-name-slog{
+    padding: 10px;
+    text-align: start;
 }
-.single-destination-outer {
+.single-feed-outer {
     margin-bottom: 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 0px 15px;
+    border-radius: 13px
+}
+.single-feed-outer img {
+    border-radius: 13px;
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
 }
 /* dashboard page css start here */
 
@@ -195,7 +253,7 @@
     font-size: 16px;
     font-family: Montserrat;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 400;
     line-height: normal;
     text-align: start; 
 }
@@ -268,7 +326,7 @@
         font-size: 16px;
         font-family: Montserrat;
         font-style: normal;
-        font-weight: 300;
+        font-weight: 400;
         line-height: normal;
         text-align: start;
     }
@@ -281,7 +339,7 @@
     }
     .profile-post-detail .post-date-place span {
     color: #000;
-    font-size: 14px;
+    font-size: 16px;
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
@@ -310,7 +368,7 @@
     }
     .profile-post-detail .post-caption h6 {
         color: #000;
-        font-size: 14px;
+        font-size: 16px;
         font-family: Montserrat;
         font-style: normal;
         font-weight: 500;
@@ -334,8 +392,8 @@
         padding: 10px;
         border-bottom: 1px solid #dfdfdf;
     }
-    .profile-post-detail .comment-form {
-        padding: 10px 10px 0;
+     .comment-form {
+        padding: 10px 10px;
     }
     .comment-form .comment-field {
         position: relative;
@@ -345,17 +403,18 @@
         top: 0;
         right: 0;
         color: #000;
-        font-size: 14px;
+        font-size: 16px;
         font-family: Montserrat;
         font-style: normal;
         font-weight: 600;
         line-height: normal;
         text-align: start;
         margin-bottom: 0;
+        padding: 0;
     }
     .profile-post-detail .single-post-comment span {
         color: #000;
-        font-size: 14px;
+        font-size: 16px;
         font-family: Montserrat;
         font-style: normal;
         font-weight: 500;
@@ -380,7 +439,7 @@
         border:none;
         padding: 0;
         color: #000;
-        font-size: 14px;
+        font-size: 16px;
         font-family: Montserrat;
         font-style: normal;
         font-weight: 600;
@@ -392,7 +451,7 @@
     }
     .comment-form .comment-field input::placeholder{
         color: #000;
-        font-size: 14px;
+        font-size: 16px;
         font-family: Montserrat;
         font-style: normal;
         font-weight: 600;
@@ -401,6 +460,15 @@
         margin-bottom: 0;
     }
 /* post-detail page css end here */
+
+/* explore page css end here */
+.explore-main-area .explore-heading h3 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 40px;
+}
+/* explore  page css end here */
 
 @media (min-width: 992px){
 .sidebar-menu .navbar-expand-lg .navbar-nav {

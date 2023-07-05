@@ -7,6 +7,7 @@ import Dashboard from './pages/dashboard/dashboard';
 import Notification from './pages/notification/notification';
 import Profile from './pages/profile/profile';
 import PostDetail from './pages/postdetail/postdetail';
+import Explore from './pages/explore/explore';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/notification" element={<Notification />} />
           <Route path="/postdetail" element={<PostDetail />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/explore" element={<Explore />} />
         </Routes>
       </div>
     </Router>
