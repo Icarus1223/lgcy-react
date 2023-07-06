@@ -75,15 +75,7 @@ const Signup: React.FC = () => {
             <Col lg={1}>
             </Col>
             
-            <Col lg={5}>
-              <div className="signin-right">
-                <div className="share-story-text">
-                  <h1>
-                    Share <br />Your  <br />Story
-                  </h1>
-                </div>
-              </div>
-            </Col>
+           
 
             <Col lg={5}>
               <div className="signin-left">
@@ -135,6 +127,15 @@ const Signup: React.FC = () => {
                       <p>Already have  an account ?<Link to="/"> Signin</Link></p>
                     </div>
                   </Form>
+                </div>
+              </div>
+            </Col>
+            <Col lg={5}>
+              <div className="signin-right">
+                <div className="share-story-text">
+                  <h1>
+                    Share <br />Your  <br />Story
+                  </h1>
                 </div>
               </div>
             </Col>
