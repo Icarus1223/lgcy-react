@@ -3,12 +3,17 @@ import { Form , Button } from 'react-bootstrap';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { Row, Col } from 'react-bootstrap';
 import postdetailimg from '../../../src/assets/images/post-detail-img.jpg';
-import likesvg from '../../../src/assets/images/like.svg';
 
 const PostDetail: React.FC = () => {
   return (<>
         <Row className="content-bar-row">
           <Col xs={12} md={12} lg={12} className="main-content">
+          <div className="profile-post-detail-outer">
+            <div className="backarrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="20" viewBox="0 0 11 20" fill="none">
+<path d="M10.62 0.989999C10.5039 0.873591 10.366 0.781234 10.2141 0.718218C10.0622 0.655201 9.89942 0.622765 9.735 0.622765C9.57058 0.622765 9.40778 0.655201 9.25592 0.718218C9.10406 0.781234 8.96612 0.873591 8.85 0.989999L0.540003 9.3C0.447299 9.39251 0.373752 9.5024 0.32357 9.62337C0.273389 9.74435 0.247559 9.87403 0.247559 10.005C0.247559 10.136 0.273389 10.2657 0.32357 10.3866C0.373752 10.5076 0.447299 10.6175 0.540003 10.71L8.85 19.02C9.34 19.51 10.13 19.51 10.62 19.02C11.11 18.53 11.11 17.74 10.62 17.25L3.38 10L10.63 2.75C11.11 2.27 11.11 1.47 10.62 0.989999Z" fill="#111111"/>
+</svg>
+            </div>
             <div className="profile-post-detail">
               <div className="profile-post-image">
                 <img src={postdetailimg} alt="profile" />
@@ -47,11 +52,11 @@ const PostDetail: React.FC = () => {
                   </div>
                 </div>
                 <div className="post-caption">
-                  <h6><b>katiemorrison</b>  This is the caption. This is the caption</h6>
+                  <h6><span>katiemorrison</span>  This is the caption. This is the caption</h6>
                 </div>
-                <div className="post-comment">
+                <div className="post-comment post-caption">
                   <div className="single-post-comment">
-                    <span><b>username</b>  This is the comment.</span>
+                    <h6><span>username</span>  This is the comment.</h6>
                   </div>
                 </div>
                 <div className="user-comment-footer">
@@ -80,6 +85,7 @@ const PostDetail: React.FC = () => {
                   </div>
                 </div>
               </div>
+            </div>
             </div>
           </Col>
         </Row>
