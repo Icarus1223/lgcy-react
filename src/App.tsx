@@ -8,19 +8,30 @@ import Notification from './pages/notification/notification';
 import Profile from './pages/profile/profile';
 import PostDetail from './pages/postdetail/postdetail';
 import Explore from './pages/explore/explore';
+import Topbar from './pages/topbar/topbar';
+import { Container } from 'react-bootstrap';
+import Sidebar from './pages/sidebar/sidebar';
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={<Signin />} />
+        <Route path="/" element={<Signin />} />
+        </Routes>
+        <Container fluid>
+          <div className="content-outer">
+      <Topbar />
+        <Routes>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/notification" element={<Notification />} />
           <Route path="/postdetail" element={<PostDetail />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/explore" element={<Explore />} />
         </Routes>
+        <Sidebar />
+</div>
+</Container>
       </div>
     </Router>
   );
