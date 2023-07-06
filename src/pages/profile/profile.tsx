@@ -9,8 +9,6 @@ import { Link } from 'react-router-dom';
 
 const Profile: React.FC = () => {
   return (<>
-    {/* <Container>
-      <div className="content-outer"> */}
         <Row className="content-bar-row">
           <Col xs={12} md={12} lg={12} className="main-content">
             <div className="profile-main">

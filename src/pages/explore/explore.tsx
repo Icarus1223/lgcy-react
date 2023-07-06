@@ -2,8 +2,12 @@ import React from 'react';
 import Sidebar from '../sidebar/sidebar';
 import Topbar from '../topbar/topbar';
 import { Container, Row, Col } from 'react-bootstrap';
-import userphone from '../../../src/assets/images/userphoto.png';
-import notifpostimage from '../../../src/assets/images/notif-post-image.jpg';
+import exploreimg1 from '../../assets/images/explore1.jpg';
+import exploreimg2 from '../../assets/images/explore2.jpg';
+import exploreimg3 from '../../assets/images/explore3.jpg';
+import exploreimg4 from '../../assets/images/explore4.jpg';
+import exploreimg5 from '../../assets/images/explore5.jpg';
+import exploreimg6 from '../../assets/images/explore6.jpg';
 
 
 const Explore: React.FC = () => {
@@ -16,9 +20,91 @@ const Explore: React.FC = () => {
               </div>
               <div className="explore-main-box">
                 <div className="explore-single-box">
-
+<div className="explore-single-img">
+  <img src={exploreimg1} alt=""/>
+</div>
+<div className="single-explore-name">
+  <h4>katiemorrison</h4>
+  <span> Our Life Adventure</span>
+  </div>
                 </div>
 
+                <div className="explore-single-box">
+<div className="explore-single-img">
+  <img src={exploreimg2} alt=""/>
+</div>
+<div className="single-explore-name">
+  <h4>katiemorrison</h4>
+  <span> Our Life Adventure</span>
+  </div>
+                </div>
+
+                <div className="explore-single-box">
+<div className="explore-single-img">
+  <img src={exploreimg3} alt=""/>
+</div>
+<div className="single-explore-name">
+  <h4>katiemorrison</h4>
+  <span> Our Life Adventure</span>
+  </div>
+                </div>
+                <div className="explore-single-box">
+<div className="explore-single-img">
+  <img src={exploreimg4} alt=""/>
+</div>
+<div className="single-explore-name">
+  <h4>katiemorrison</h4>
+  <span> Our Life Adventure</span>
+  </div>
+                </div>
+                <div className="explore-single-box">
+<div className="explore-single-img">
+  <img src={exploreimg5} alt=""/>
+</div>
+<div className="single-explore-name">
+  <h4>katiemorrison</h4>
+  <span> Our Life Adventure</span>
+  </div>
+                </div>
+                <div className="explore-single-box">
+<div className="explore-single-img">
+  <img src={exploreimg6} alt=""/>
+</div>
+<div className="single-explore-name">
+  <h4>katiemorrison</h4>
+  <span> Our Life Adventure</span>
+  </div>
+                </div>
+                <div className="explore-single-box">
+<div className="explore-single-img">
+  <img src={exploreimg1} alt=""/>
+</div>
+<div className="single-explore-name">
+  <h4>katiemorrison</h4>
+  <span> Our Life Adventure</span>
+  </div>
+                </div>
+
+                <div className="explore-single-box">
+<div className="explore-single-img">
+  <img src={exploreimg2} alt=""/>
+</div>
+<div className="single-explore-name">
+  <h4>katiemorrison</h4>
+  <span> Our Life Adventure</span>
+  </div>
+                </div>
+
+                <div className="explore-single-box">
+<div className="explore-single-img">
+  <img src={exploreimg3} alt=""/>
+</div>
+<div className="single-explore-name">
+  <h4>katiemorrison</h4>
+  <span> Our Life Adventure</span>
+  </div>
+                </div>
+                
               </div>
             </div>
           </Col>

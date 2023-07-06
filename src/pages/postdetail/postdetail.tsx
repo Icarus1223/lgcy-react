@@ -9,8 +9,6 @@ import likesvg from '../../../src/assets/images/like.svg';
 
 const PostDetail: React.FC = () => {
   return (<>
-    {/* <Container>
-      <div className="content-oute1r"> */}
         <Row className="content-bar-row">
           <Col xs={12} md={12} lg={12} className="main-content">
             <div className="profile-post-detail">
@@ -87,8 +85,6 @@ const PostDetail: React.FC = () => {
             </div>
           </Col>
         </Row>
-      {/* </div>
-    </Container> */}
   </>
   );
 };
