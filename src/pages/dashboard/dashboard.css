@@ -1,3 +1,23 @@
+/* back arrow css start here */
+.profile-post-detail-outer .backarrow{
+    margin-bottom: 15px;
+    text-align: start;
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-post-detail-outer .backarrow svg{
+    width: 13px; 
+     height: 13px;
+}
+/* back arrow end here */
 /* top bar css start here */
 .top-bar {
     position: fixed;
@@ -158,9 +178,10 @@ p.u-desc {
     padding: 10px 10px 0;
     display: flex;
     gap:10px;
+    margin: 10px 0;
 }
 .all-feeds-lists .feed-uname h4 {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 16px;
     margin-bottom: 0;
     text-align: start;
@@ -175,6 +196,10 @@ p.u-desc {
 }
 .feed-comment-outer .feed-comment.feed-post-date {
     padding:0 10px 10px;
+    margin: 10px 0;
+}
+.feed-post-date p {
+    text-transform: uppercase;
 }
 .more-comment a {
     color: #000;
@@ -345,18 +370,24 @@ p.u-desc {
 
 /* post-detail page css end here */
 
-.profile-post-detail{
+.profile-post-detail-outer{
     max-width: 800px;
     margin: 50px auto 30px;
+    position: relative;
+}
+.profile-post-detail{
     display: grid;
     grid-template-columns: 2fr 2fr;
 }
 .profile-post-detail .profile-post-image img{
      max-width: 100%;
 }
+.profile-post-detail .profile-post-content .post-heading h4{
+    font-size: 18px;
+}
 .profile-post-detail .profile-post-content h4 {
     color: #000;
-    font-size: 18px;
+    font-size: 16px;
     font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
@@ -392,7 +423,7 @@ p.u-desc {
     font-size: 16px;
     font-family: Montserrat;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     line-height: normal;
     text-align: start;
 }
@@ -416,12 +447,15 @@ p.u-desc {
     .profile-post-detail .post-caption {
         padding: 10px;
     }
+    .profile-post-detail .post-caption h6 span{
+font-weight: 600;
+    }
     .profile-post-detail .post-caption h6 {
         color: #000;
         font-size: 16px;
         font-family: Montserrat;
         font-style: normal;
-        font-weight: 500;
+        font-weight: 400;
         line-height: normal;
         text-align: start;
         margin-bottom: 0;
@@ -442,6 +476,10 @@ p.u-desc {
         padding: 10px;
         border-bottom: 1px solid #dfdfdf;
     }
+    .user-comment-like-outer .like-icon svg path{
+        fill:red;
+        stroke:red;
+    } 
      .comment-form {
         padding: 10px 10px;
     }
@@ -555,7 +593,12 @@ p.u-desc {
 }
 @media (max-width: 992px){
     .top-bar{
-        z-index: 0;
+        z-index: 1;
+        background-color: transparent;
+        max-width: 350px;
+        margin: 0 auto;
+        left: 50%;
+        transform: translate(-50%, 0%);
     }
     .menu-bar-row{
         width:100%;
@@ -569,19 +612,76 @@ p.u-desc {
         background: #fff;
         top: 70px;
         position: absolute;
+        transition: left 0.2s ease-in-out;
+        left:-100%;
     }
+      .left-side-bar .navbar-collapse.show {
+        left: 0;
+        height: 100vh;
+      }
     .menu-bar-row .sidebar{
 width:100%;
     }
     .left-side-bar .sidebar-menu {
         margin-top: 0px;
     }
+    .site-logo {
+        margin-top: 10px;
+    }
+    .content-bar-row{
+        position:relative;
+        z-index: -1;
+    }
+    .left-side-bar .sidebar-menu {
+        height: 100%;
+        overflow-y: inherit;
+    }
     .left-side-bar {
         position: relative;
         flex-flow: column-reverse;
         display: flex;
+        z-index: 1;
+        background: #fff;
     }
     .navbar-toggler:focus{
         box-shadow: none;
+        border: none;
     }
+    .search-bar-form {
+        padding: 8px 0 40px;
+}
+button.navbar-toggler.collapsed {
+    border: none;
+}
+.sidebar-menu .navbar-nav {
+    padding: 0 10px;
+}
+
+}
+@media (max-width: 767px){
+.top-bar{
+    max-width: 280px;
+}
+.search-bar-form form input {
+    padding: 3px;
+    font-size: 16px;
+}
+.search-bar-form .search-icon img.searchicon {
+    width: 15px;
+}
+.search-bar-form .search-icon{
+    top:0;
+}
+span.navbar-toggler-icon{
+    width: 22px;
+}
+.search-bar-form {
+    padding: 15px 0 40px;
+}
+
+}
+@media (max-width: 420px){
+    .top-bar {
+        max-width: 215px;
+    }    
 }
