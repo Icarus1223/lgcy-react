@@ -204,3 +204,36 @@ export const notificationData = [
       ],
     },
   ];
+
+  export const exploreData = [
+    {
+      "image": "https://images.unsplash.com/photo-1617854818583-09e7f077a156?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "title": "Title 1",
+      "description": "Description 1"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1598128558393-70ff21433be0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXJsfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+      "title": "Title 2",
+      "description": "Description 2"
+    },
+    {
+      "image": "https://media.istockphoto.com/id/1408387701/photo/social-media-marketing-digitally-generated-image-engagement.webp?b=1&s=170667a&w=0&k=20&c=udzg1fifSWZqXvkBJyEAPe2iFGiEi9NxasBCpBAdogo=",
+      "title": "Title 3",
+      "description": "Description 3"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1598128558393-70ff21433be0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXJsfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+      "title": "Title 4",
+      "description": "Description 4"
+    },
+    {
+      "image": "https://media.istockphoto.com/id/1408387701/photo/social-media-marketing-digitally-generated-image-engagement.webp?b=1&s=170667a&w=0&k=20&c=udzg1fifSWZqXvkBJyEAPe2iFGiEi9NxasBCpBAdogo=",
+      "title": "Title 5",
+      "description": "Description 5"
+    },
+    {
+      "image": "https://media.istockphoto.com/id/1408387701/photo/social-media-marketing-digitally-generated-image-engagement.webp?b=1&s=170667a&w=0&k=20&c=udzg1fifSWZqXvkBJyEAPe2iFGiEi9NxasBCpBAdogo=",
+      "title": "Title 6",
+      "description": "Description 6"
+    }
+  ];

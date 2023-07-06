@@ -9,8 +9,8 @@ import Notification from './pages/notification/notification';
 import PostDetail from './pages/postdetail/postdetail';
 import Profile from './pages/profile/profile';
 import Explore from './pages/explore/explore';
-import Friends from './pages/friends/friends';
 import Signup from './pages/auth/signup/Signup';
+import Friends from './pages/friends/friends';
 
 function App() {
   return (
