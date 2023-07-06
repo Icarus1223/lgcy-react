@@ -64,6 +64,9 @@ const Signin: React.FC = () => {
                       <Button variant="primary" className="sign-in-btn">
                         <Link to="/dashboard" className="link-button">Sign In</Link>
                       </Button>
+                      <div className="signup-link">
+                        <p>Don't have an account? <Link to="/Signup"> Signup</Link></p>
+                      </div>
                     </Form>
                   </div>
                 </div>
