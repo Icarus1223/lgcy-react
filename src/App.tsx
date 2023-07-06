@@ -17,21 +17,78 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-        <Route path="/" element={<Signin />} />
+          <Route path="/" element={<Signin />} />
+          <Route
+            path="/dashboard"
+            element={
+              <>
+                <Topbar />
+                <Container fluid>
+                  <div className="content-outer">
+                    <Sidebar />
+                    <Dashboard />
+                  </div>
+                </Container>
+              </>
+            }
+          />
+          <Route
+            path="/notification"
+            element={
+              <>
+                <Topbar />
+                <Container fluid>
+                  <div className="content-outer">
+                    <Sidebar />
+                    <Notification />
+                  </div>
+                </Container>
+              </>
+            }
+          />
+          <Route
+            path="/postdetail"
+            element={
+              <>
+                <Topbar />
+                <Container fluid>
+                  <div className="content-outer">
+                    <Sidebar />
+                    <PostDetail />
+                  </div>
+                </Container>
+              </>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <>
+                <Topbar />
+                <Container fluid>
+                  <div className="content-outer">
+                    <Sidebar />
+                    <Profile />
+                  </div>
+                </Container>
+              </>
+            }
+          />
+          <Route
+            path="/explore"
+            element={
+              <>
+                <Topbar />
+                <Container fluid>
+                  <div className="content-outer">
+                    <Sidebar />
+                    <Explore />
+                  </div>
+                </Container>
+              </>
+            }
+          />
         </Routes>
-        <Container fluid>
-          <div className="content-outer">
-      <Topbar />
-        <Routes>
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/notification" element={<Notification />} />
-          <Route path="/postdetail" element={<PostDetail />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/explore" element={<Explore />} />
-        </Routes>
-        <Sidebar />
-</div>
-</Container>
       </div>
     </Router>
   );
