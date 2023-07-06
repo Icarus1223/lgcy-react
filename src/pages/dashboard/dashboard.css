@@ -1,23 +1,41 @@
+/* back arrow css start here */
+.profile-post-detail-outer .backarrow{
+    margin-bottom: 15px;
+    text-align: start;
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+}
+.profile-post-detail-outer .backarrow svg{
+    width: 13px; 
+     height: 13px;
+}
+/* back arrow end here */
 /* top bar css start here */
 .top-bar {
     position: fixed;
     width: 100%;
     background: #fff;
     top: 0;
-    z-index: 999;
+    z-index:999;
 }
-
 .search-bar-form {
     padding: 18px 0 40px;
     cursor: pointer;
 }
-
-.search-bar-form form {
+.search-bar-form form{
     position: relative;
     max-width: 375px;
     margin: 0 auto;
 }
-
 .search-bar-form form input {
     border-radius: 10px;
     border: 1px solid rgba(0, 0, 0, 0.50);
@@ -30,17 +48,14 @@
     font-family: 'Montserrat';
     font-size: 18px;
 }
-
-.search-bar-form .search-icon {
+.search-bar-form .search-icon{
     position: absolute;
     top: 3px;
     left: 10px;
 }
-
 .search-bar-form .search-icon img.searchicon {
     width: 20px;
 }
-
 /* top bar css end here */
 
 
@@ -48,24 +63,22 @@
 .left-side-bar .site-logo img.logo {
     width: 100px;
 }
-
 .left-side-bar .sidebar-menu {
     margin-top: 50px;
+    display: inline-block;
+    height: 400px;
+    overflow-y: auto;
 }
-
-.left-side-bar .sidebar-menu nav a {
-    color: #000;
+.left-side-bar .sidebar-menu nav a{
+    color:#000;
 }
-
-.left-side-bar .sidebar-menu nav a svg path {
-    fill: #808080;
+.left-side-bar .sidebar-menu nav a svg path{
+    fill:#808080;
 }
-
 .left-side-bar .sidebar-menu nav a svg {
     margin-right: 20px;
     width: 25px;
 }
-
 .left-side-bar .sidebar-menu a.nav-link {
     font-family: 'Montserrat';
     font-size: 18px;
@@ -73,17 +86,61 @@
     display: flex;
     margin-bottom: 20px;
 }
-
 .left-side-bar .sidebar-menu a.active {
     color: #000;
-    font-weight: 600 !important;
+    font-weight: 600!important;
 }
-
-.left-side-bar .sidebar-menu a.active svg path {
-    fill: #000;
+.left-side-bar .sidebar-menu a.active svg path{
+    fill:#000;
 }
-
 /* sidebar css end here */
+/* friends page css start here */
+.friend-main {
+    max-width: 600px;
+    margin: 0px auto 20px;
+}
+.friend-search-chat .search-bar-form form input {
+    padding: 5px 20px;
+    border-radius: 50px;
+    text-align: start;
+}
+.friend-search-chat .search-bar-form form {
+    position: relative;
+    max-width: 375px;
+    margin: 0;
+    margin-right: auto!important;
+}
+.friend-search-chat span {
+    display: block;
+    text-align: start;
+    font-size: 20px;
+}
+.all-chat-list .single-chat-list-box {
+    display: flex;
+    align-items: start;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.all-chat-list .single-chat-list-box img {
+    width: 60px;
+    border-radius: 100%;
+    border: 1px solid #000;
+}
+.all-chat-list .single-chat-list-box .user-small-info {
+    margin-left: 20px;
+    display: grid;
+    grid-template-rows: 56px;
+    border-bottom: 1px solid #838383;
+    width: 100%;
+    text-align: start;
+}
+.all-chat-list .single-chat-list-box 
+p.u-desc {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+/* friends page css end here */
 
 .content-outer {
     position: relative;
@@ -91,24 +148,16 @@
 }
 
 /* dashboard page css start here */
-.content-outer h1,
-.content-outer h2,
-.content-outer h3,
-.content-outer h4,
-.content-outer h5,
-.content-outer h6,
-.content-outer span,
-.content-outer p {
+.content-outer h1 ,.content-outer h2 , .content-outer h3 , .content-outer h4
+, .content-outer h5 , .content-outer h6 ,  .content-outer span , .content-outer p{
     font-family: 'Montserrat';
 }
-
 .all-feeds-lists .single-feed-outer .feed-name-slog h4 {
     font-weight: 600;
     font-size: 18px;
     margin-bottom: 0;
     text-align: start;
 }
-
 .all-feeds-lists .single-feed-outer .feed-name-slog span {
     font-weight: 400;
     font-size: 16px;
@@ -120,53 +169,53 @@
     align-items: center;
     margin: 0 auto;
     padding: 10px 10px 0px;
-    gap: 10px;
+    gap:10px;
 }
-
 .all-feeds-lists .feed-likes .like-icon svg path {
     fill: red;
     stroke: red;
 }
-
 .all-feeds-lists .feed-caption-outer {
     padding: 10px 10px 0;
     display: flex;
-    gap: 10px;
+    gap:10px;
+    margin: 10px 0;
 }
-
 .all-feeds-lists .feed-uname h4 {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 16px;
     margin-bottom: 0;
     text-align: start;
-    color: #000;
+    color: #000;    
     line-height: 24px;
 
 }
-
+.all-feeds-lists .feed-uname h4 span{
+    font-weight: 600;
+    margin-right: 6px;
+}
 .feed-comment-outer .feed-comment {
     padding: 0 10px 0px;
     display: flex;
     gap: 10px;
 }
-
 .feed-comment-outer .feed-comment.feed-post-date {
-    padding: 0 10px 10px;
+    padding:0 10px 10px;
+    margin: 10px 0;
 }
-
+.feed-post-date p {
+    text-transform: uppercase;
+}
 .more-comment a {
     color: #000;
 }
-
-.feed-form.comment-form {
-    padding: 10px;
-    border-top: 1px solid #dfdfdf;
+.feed-form.comment-form{
+    padding:10px;
+    border-top:1px solid #dfdfdf;
 }
-
-.all-feeds-lists .single-feed-outer .feed-likes .feed-name-slog {
+.all-feeds-lists .single-feed-outer .feed-likes .feed-name-slog{
     padding: 0;
 }
-
 .all-feeds-lists .feed-caption p {
     font-weight: 400;
     font-size: 16px;
@@ -174,55 +223,47 @@
     text-align: start;
     color: #000;
 }
-
 .main-content .all-feeds-lists {
     max-width: 475px;
     margin: 50px auto 20px;
     padding: 5px 0;
 }
-
-.main-content .all-feeds-lists::-webkit-scrollbar-track {
+  .main-content .all-feeds-lists::-webkit-scrollbar-track {
     border-radius: 8px;
     background-color: #fff;
     border: 1px solid #fff;
     box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-}
-
-.main-content .all-feeds-lists::-webkit-scrollbar-thumb {
+  }
+   
+  .main-content .all-feeds-lists::-webkit-scrollbar-thumb {
     border-radius: 8px;
     background-color: #a9acad;
-}
-
-.main-content .all-feeds-lists::-webkit-scrollbar {
+  }
+  .main-content .all-feeds-lists::-webkit-scrollbar{
     width: 8px;
-}
-
+  }
 .menu-bar-row {
     top: 0;
     width: 214px;
     position: fixed;
     margin-top: 100px
 }
-
-.all-feeds-lists .single-feed-outer .feed-name-slog {
+.all-feeds-lists .single-feed-outer .feed-name-slog{
     padding: 10px;
     text-align: start;
 }
-
 .single-feed-outer {
     margin-bottom: 30px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     padding: 0px 15px;
     border-radius: 13px
 }
-
 .single-feed-outer img {
     border-radius: 13px;
     height: 400px;
     object-fit: cover;
     width: 100%;
 }
-
 /* dashboard page css start here */
 
 /*notification page css start here */
@@ -233,32 +274,35 @@
     color: #000;
     margin-bottom: 40px;
 }
-
 .notifications-content-area {
     max-width: 475px;
-    margin: 50px auto 0;
+    margin:50px auto 0;
 }
-
 .single-notification {
     display: grid;
     grid-template-columns: 1fr 8fr 1fr;
-    align-items: center;
+    align-items: start;
     margin-bottom: 25px;
     gap: 20px;
 }
-
 .single-notification .user-profile-pic img.searchicon {
     border-radius: 100px;
+    width: 35px;
+    height: 35px;
+    object-fit: fill;
 }
-
+.single-notification .post-image img {
+    width: 52px;
+    height: 40px;
+    object-fit: fill;
+}
 .single-notification .user-activity-on-post h6 {
     font-family: 'Montserrat';
-    font-size: 18px;
-    margin-bottom: 0;
+    font-size: 16px;
+    margin-bottom:0;
     text-align: start;
 }
-
-.single-notification .user-activity-on-post h6 span {
+.single-notification .user-activity-on-post h6 span{
     font-weight: 600;
 }
 
@@ -269,11 +313,11 @@
     max-width: 650px;
     margin: 0 auto 30px;
 }
-
 .profil-img-content .prof-img img {
-    width: 60%;
+    width: 80px;
+    border-radius: 100px;
+    height: 80px;
 }
-
 .profile-main .profile-heading h5 {
     color: #000;
     text-align: center;
@@ -283,18 +327,16 @@
     font-weight: 600;
     line-height: normal;
 }
-
-.profil-img-content .user-small-info h4.u-name {
+.profil-img-content .user-small-info h4.u-name{
     color: #000;
     font-size: 18px;
     font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
-    line-height: normal;
-    text-align: start;
-    margin-bottom: 20px;
+    line-height: normal; 
+    text-align: start; 
+    margin-bottom: 20px; 
 }
-
 .profil-img-content .user-small-info p.u-desc {
     color: #000;
     text-align: center;
@@ -304,23 +346,21 @@
     font-weight: 400;
     line-height: normal;
     text-align: start;
+    margin-bottom: 0; 
 }
-
 .profil-img-content {
     display: flex;
     align-items: center;
     margin: 50px 0;
     gap: 30px;
 }
-
-.profile-main .single-box .activity-content {
-    display: flex;
+.profile-main .single-box .activity-content{
+    display:flex;
     align-items: center;
     justify-content: space-between;
     justify-content: space-between;
     margin-top: 20px;
 }
-
 .profile-main .single-box .activity-content p {
     color: #000;
     text-align: center;
@@ -330,39 +370,52 @@
     font-weight: 500;
     line-height: normal;
     margin-bottom: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-
 .profile-main .user-activity-image-box {
     display: grid;
-    grid-template-columns: 2fr 2fr;
-    column-gap: 50px;
+    grid-template-columns: 45% 45%;
     row-gap: 40px;
-
+    justify-content: space-between;
 }
-
 .profile-main .single-box .activity-image img {
     border-radius: 13px;
     max-width: 100%;
+    width: 300px;
+    height: 300px;
+    object-fit: fill;
 }
-
 /*profile page css end here */
 
 /* post-detail page css end here */
 
-.profile-post-detail {
+.profile-post-detail-outer{
     max-width: 800px;
     margin: 50px auto 30px;
+    position: relative;
+}
+.main-content .post-single-detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-post-detail{
     display: grid;
     grid-template-columns: 2fr 2fr;
 }
-
-.profile-post-detail .profile-post-image img {
-    max-width: 100%;
+.profile-post-detail .profile-post-image img{
+     max-width: 100%;
+     width: 360px;
+     height: 500px;
+     object-fit: cover;
 }
-
+.profile-post-detail .profile-post-content .post-heading h4{
+    font-size: 18px;
+}
 .profile-post-detail .profile-post-content h4 {
     color: #000;
-    font-size: 18px;
+    font-size: 16px;
     font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
@@ -370,17 +423,30 @@
     text-align: start;
     margin-bottom: 0px;
 }
-
-.post-threedot-icon button.post-option-button:after {
+.post-threedot-icon button.post-option-button:after{
     display: none;
 }
-
-.post-threedot-icon button.post-option-button:active,
-.post-threedot-icon button.post-option-button.show {
-    border: none;
+.post-threedot-icon button.post-option-button:active ,
+.post-threedot-icon button.post-option-button.show{
+    border:none;
 }
-
-.profile-post-detail .profile-post-content p {
+    .profile-post-detail .profile-post-content p {
+        color: #000;
+        font-size: 16px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: start;
+    }
+    .profile-post-detail .post-date-place {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #dfdfdf;
+        padding: 10px;
+    }
+    .profile-post-detail .post-date-place span {
     color: #000;
     font-size: 16px;
     font-family: Montserrat;
@@ -389,156 +455,131 @@
     line-height: normal;
     text-align: start;
 }
-
-.profile-post-detail .post-date-place {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #dfdfdf;
-    padding: 10px;
+.profile-post-content{
+    position:relative;
 }
-
-.profile-post-detail .post-date-place span {
-    color: #000;
-    font-size: 16px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-align: start;
-}
-
-.profile-post-content {
-    position: relative;
-}
-
 .profile-post-content .user-comment-footer {
     position: absolute;
     bottom: 0;
     width: 100%;
 }
-
-.profile-post-detail .post-heading {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 10px;
-}
-
-.profile-post-detail .post-decr {
-    padding-left: 10px;
-}
-
-.profile-post-detail .post-caption {
-    padding: 10px;
-}
-
-.profile-post-detail .post-caption h6 {
-    color: #000;
-    font-size: 16px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-align: start;
-    margin-bottom: 0;
-}
-
-.profile-post-detail .post-comment {
-    padding: 0 10px 10px;
-    height: 200px;
-    overflow-y: auto;
-}
-
-.profile-post-detail .single-post-comment {
-    text-align: start;
-}
-
-.user-comment-like-outer {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: start;
-    padding: 10px;
-    border-bottom: 1px solid #dfdfdf;
-}
-
-.comment-form {
-    padding: 10px 10px;
-}
-
-.comment-form .comment-field {
-    position: relative;
-}
-
-.comment-field button.sub-bnt-comnt {
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: #000;
-    font-size: 16px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    text-align: start;
-    margin-bottom: 0;
-    padding: 0;
-}
-
-.profile-post-detail .single-post-comment span {
-    color: #000;
-    font-size: 16px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-align: start;
-    margin-bottom: 0;
-}
-
-.user-comment-like-outer span {
-    color: #000;
-    font-size: 18px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    text-align: start;
-    margin-bottom: 0;
-}
-
-.user-comment-like-outer .like-icon img {
-    width: 18px;
-}
-
-.comment-form .comment-field input {
-    border: none;
-    padding: 0;
-    color: #000;
-    font-size: 16px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    text-align: start;
-}
-
-.comment-form .comment-field input:focus {
-    box-shadow: none;
-}
-
-.comment-form .comment-field input::placeholder {
-    color: #000;
-    font-size: 16px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    text-align: start;
-    margin-bottom: 0;
-}
-
+    .profile-post-detail .post-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 10px;
+    }
+    .profile-post-detail .post-decr{
+        padding-left: 10px; 
+    }
+    .profile-post-detail .post-caption {
+        padding: 10px;
+    }
+    .profile-post-detail .post-caption h6 span{
+font-weight: 600;
+    }
+    .profile-post-detail .post-caption h6 {
+        color: #000;
+        font-size: 16px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: start;
+        margin-bottom: 0;
+    }
+    .profile-post-detail .post-comment{
+        padding:0 10px 10px;
+        height: 200px;
+        overflow-y: auto;
+    }
+    .profile-post-detail .single-post-comment{
+        text-align: start;
+    }
+    .profile-post-content .all-comment {
+        height: 220px;
+        overflow-y: auto;
+    }
+    .user-comment-like-outer {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: start;
+        padding: 10px;
+        border-bottom: 1px solid #dfdfdf;
+    }
+    .user-comment-like-outer .like-icon svg path{
+        fill:red;
+        stroke:red;
+    } 
+     .comment-form {
+        padding: 10px 10px;
+    }
+    .comment-form .comment-field {
+        position: relative;
+    }
+    .comment-field button.sub-bnt-comnt {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #000;
+        font-size: 16px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-align: start;
+        margin-bottom: 0;
+        padding: 0;
+    }
+    .profile-post-detail .single-post-comment span {
+        color: #000;
+        font-size: 16px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-align: start;
+        margin-bottom: 0;
+    }
+    .user-comment-like-outer span {
+        color: #000;
+        font-size: 18px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-align: start;
+        margin-bottom: 0;
+    }
+    .user-comment-like-outer .like-icon img {
+        width: 18px;
+    }
+    .comment-form .comment-field input{
+        border:none;
+        padding: 0;
+        color: #000;
+        font-size: 16px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-align: start;
+        width:80%;
+    }
+    .comment-form .comment-field input:focus{
+        box-shadow: none;
+    }
+    .comment-form .comment-field input::placeholder{
+        color: #000;
+        font-size: 16px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-align: start;
+        margin-bottom: 0;
+    }
 /* post-detail page css end here */
 
 /* explore page css end here */
@@ -548,50 +589,202 @@
     color: #000;
     margin-bottom: 40px;
 }
+.explore-main-area {
+    max-width: 750px;
+    margin: 0px auto 20px;
+    padding: 5px 0;
+}
+.explore-main-box{
+    margin: 0px auto 20px;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    row-gap: 30px;   
+}
+.explore-main-box .explore-single-img img{
+    height: 200px;
+    max-width: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+.explore-main-box  .explore-single-box {
+    padding: 0 5px;
+}
+.single-explore-name {
+    margin-top: 10px;
+}
+.single-explore-name h4 {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 0;
+    text-align: start;
+    overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 
+.single-explore-name span {
+    font-weight: 400;
+    font-size: 14px;
+    text-align: start;
+    display: block;
+}
 /* explore  page css end here */
 
-@media (min-width: 992px) {
-    .sidebar-menu .navbar-expand-lg .navbar-nav {
-        flex-direction: column;
+/* media query css start from here */
+@media (max-width: 1200px){
+    .explore-main-box{
+        grid-template-columns: 50% 50%;
+    }
+    .explore-main-area {
+        max-width: 550px;
     }
 }
 
-@media (max-width: 992px) {
-    .top-bar {
-        z-index: 0;
+@media (max-width: 1024px){
+    .profile-main {
+        max-width: 550px;
+}
+}
+@media (min-width: 992px){
+   
+.sidebar-menu .navbar-expand-lg .navbar-nav {
+    flex-direction: column;
+}
+}
+@media (max-width: 992px){
+    .main-content .all-feeds-lists{
+        margin: 0 auto 20px;
     }
-
-    .menu-bar-row {
-        width: 100%;
+    .profile-post-content .all-comment {
+        height: auto;
+    }
+    .profile-post-detail {
+        grid-template-columns: 100%;
+    }
+    .profile-post-detail .post-date-place {
+        display: block;
+    }
+    .profile-post-detail .post-info{
+        text-align: start;
+    }
+    .profile-post-content .user-comment-footer {
+        position: inherit;
+    }
+    
+    .top-bar{
+        z-index: 1;
+        background-color: transparent;
+        max-width: 350px;
+        margin: 0 auto;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+    .menu-bar-row{
+        width:100%;
         right: 0;
         left: 0;
-        margin-top: 0;
-        margin: 0;
+        margin-top:0;
+        margin:0;
     }
-
     .sidebar-menu .navbar-collapse {
         width: 100%;
         background: #fff;
         top: 70px;
         position: absolute;
+        transition: left 0.2s ease-in-out;
+        left:-100%;
     }
-
-    .menu-bar-row .sidebar {
-        width: 100%;
+      .left-side-bar .navbar-collapse.show {
+        left: 0;
+        height: 100vh;
+      }
+    .menu-bar-row .sidebar{
+width:100%;
+padding: 0;
     }
-
     .left-side-bar .sidebar-menu {
         margin-top: 0px;
     }
-
+    .site-logo {
+        margin-top: 10px;
+        padding-bottom: 10px;
+    }
+    .content-bar-row{
+        position:relative;
+        margin-top: 160px;
+    }
+    .left-side-bar .sidebar-menu {
+        height: 100%;
+        overflow-y: inherit;
+        padding: 0 10px;
+    }
     .left-side-bar {
         position: relative;
         flex-flow: column-reverse;
         display: flex;
+        z-index: 1;
+        background: #fff;
     }
-
-    .navbar-toggler:focus {
+    .navbar-toggler:focus{
         box-shadow: none;
+        border: none;
+    }
+    .search-bar-form {
+        padding: 8px 0 40px;
+}
+button.navbar-toggler.collapsed {
+    border: none;
+}
+.sidebar-menu .navbar-nav {
+    padding: 0 10px;
+}
+.explore-main-area .explore-heading h3{
+    font-size: 24px;
+}
+.notifications-content-area{
+    margin:0px auto 0;
+}
+.all-notifications-lists h3{
+    font-size: 24px;
+}
+}
+@media (max-width: 767px){
+.top-bar{
+    max-width: 280px;
+}
+.all-chat-list .single-chat-list-box p.u-desc {
+    font-size: 16px;
+}
+.search-bar-form form input {
+    padding: 3px;
+    font-size: 16px;
+}
+.search-bar-form .search-icon img.searchicon {
+    width: 15px;
+}
+.search-bar-form .search-icon{
+    top:0;
+}
+span.navbar-toggler-icon{
+    width: 22px;
+}
+.search-bar-form {
+    padding: 15px 0 40px;
+}
+.profile-main .user-activity-image-box{
+    grid-template-columns: 100%;
+}
+.profile-main .single-box .activity-content{
+    justify-content: center;
+}
+}
+@media (max-width: 420px){
+    .top-bar {
+        max-width: 215px;
+    }    
+    .single-notification .user-activity-on-post h6{
+        font-size: 14px;
     }
 }
+
+/* media query css end from here */

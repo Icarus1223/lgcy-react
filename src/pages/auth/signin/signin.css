@@ -26,7 +26,7 @@
 
 .signin-form .input-field input::placeholder {
   color: #000;
-  text-align: center;
+  /* text-align: center; */
   font-size: 18px;
 }
 
@@ -47,6 +47,8 @@ button.sign-in-btn {
 button.sign-in-btn a {
   color: #fff;
   text-decoration: none;
+  width: 100%;
+    display: block;
 }
 
 .signin-form .input-field input:focus {
@@ -77,6 +79,17 @@ button.sign-in-btn:hover {
 
 .download-buttons img {
   width: 200px;
+}
+.signup-link {
+  margin-top: 10px;
+}
+.signup-link p {
+  margin-bottom: 0;
+  font-family: 'Radley';
+  font-size: 16px;
+}
+.signup-link p a{
+text-decoration:none;
 }
 
 @media(max-width:1200px) {
