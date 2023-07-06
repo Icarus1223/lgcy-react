@@ -4,7 +4,6 @@ import './signin.css';
 import logo from '../../../assets/images/logo.png';
 import playstore from '../../../assets/images/play-store.png';
 import appstore from '../../../assets/images/app-store.png';
-import ShareYourStory from '../../../assets/images/ShareYourStory.png'
 import { setUsername, setPassword, resetForm } from '../../../redux/actions/signinActions';
 import Footer from '../../../components/GlobalComponent/footer/footer';
 import 'bootstrap/dist/css/bootstrap.min.css';

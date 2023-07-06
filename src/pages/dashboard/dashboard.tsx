@@ -46,21 +46,18 @@ const DashBoard: React.FC = () => {
                                             </div>
                                             <div className="feed-caption-outer">
                                                 <div className="feed-uname">
-                                                    <h4>{location.name}</h4>
-                                                </div>
-                                                <div className="feed-caption">
-                                                    <p>{location.description}</p>
+                                                    <h4><span>{location.name}</span> {location.description}</h4>
                                                 </div>
                                             </div>
                                             <div className="feed-comment-outer">
                                                 {location.comments.map((comment, commentIndex) => (
                                                     <div className="feed-comment" key={commentIndex}>
                                                         <div className="feed-uname">
-                                                            <h4>{comment.user}</h4>
+                                                            <h4><span>{comment.user} </span> {comment.comment}</h4>
                                                         </div>
-                                                        <div className="feed-caption">
+                                                        {/* <div className="feed-caption">
                                                             <p>{comment.comment}</p>
-                                                        </div>
+                                                        </div> */}
                                                     </div>
                                                 ))}
                                                 <div className="feed-comment more-comment">

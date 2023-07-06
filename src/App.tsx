@@ -3,13 +3,14 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
-import Signin from './pages/auth/signin/Signin';
-import DashBoard from './pages/dashboard/Dashboard';
-import Notification from './pages/notification/Notification';
-import PostDetail from './pages/postdetail/Postdetail';
-import Profile from './pages/profile/Profile';
-import Explore from './pages/explore/Explore';
-import Signup from './pages/auth/signup/Signup';
+import Signin from './pages/auth/signin/signin';
+import DashBoard from './pages/dashboard/dashboard';
+import Notification from './pages/notification/notification';
+import PostDetail from './pages/postdetail/postdetail';
+import Profile from './pages/profile/profile';
+import Explore from './pages/explore/explore';
+import Signup from './pages/auth/signup/signup';
+import Friends from './pages/friends/friends';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/postdetail/:id" element={<PostDetail />} />
           <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
           <Route path="/explore" element={<ProtectedRoute><Explore /></ProtectedRoute>} />
+          <Route path="/friends" element={<ProtectedRoute><Friends /></ProtectedRoute>} />
         </Routes>
       </div>
     </Router>
