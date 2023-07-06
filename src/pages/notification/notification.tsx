@@ -1,7 +1,5 @@
 import React from "react";
-import Sidebar from "../sidebar/sidebar";
-import Topbar from "../topbar/topbar";
-import {Container, Row, Col} from "react-bootstrap";
+import { Row, Col} from "react-bootstrap";
 import {notificationData} from "../../data";
 
 const Notification: React.FC = () => {
@@ -44,7 +42,6 @@ const Notification: React.FC = () => {
                             </div>
                         </Col>
                     </Row>
-                    <Sidebar />
         </>
     );
 };

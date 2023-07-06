@@ -1,16 +1,14 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Signin from './pages/auth/signin/signin';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Dashboard from './pages/dashboard/dashboard';
-import Notification from './pages/notification/notification';
-import Profile from './pages/profile/profile';
-import PostDetail from './pages/postdetail/postdetail';
-import Explore from './pages/explore/explore';
-import Topbar from './pages/topbar/topbar';
-import { Container } from 'react-bootstrap';
-import Sidebar from './pages/sidebar/sidebar';
+import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
+import Signin from './pages/auth/signin/Signin';
+import DashBoard from './pages/dashboard/Dashboard';
+import Notification from './pages/notification/Notification';
+import PostDetail from './pages/postdetail/Postdetail';
+import Profile from './pages/profile/Profile';
+import Explore from './pages/explore/Explore';
 
 function App() {
   return (
@@ -18,76 +16,11 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Signin />} />
-          <Route
-            path="/dashboard"
-            element={
-              <>
-                <Topbar />
-                <Container fluid>
-                  <div className="content-outer">
-                    <Sidebar />
-                    <Dashboard />
-                  </div>
-                </Container>
-              </>
-            }
-          />
-          <Route
-            path="/notification"
-            element={
-              <>
-                <Topbar />
-                <Container fluid>
-                  <div className="content-outer">
-                    <Sidebar />
-                    <Notification />
-                  </div>
-                </Container>
-              </>
-            }
-          />
-          <Route
-            path="/postdetail"
-            element={
-              <>
-                <Topbar />
-                <Container fluid>
-                  <div className="content-outer">
-                    <Sidebar />
-                    <PostDetail />
-                  </div>
-                </Container>
-              </>
-            }
-          />
-          <Route
-            path="/profile"
-            element={
-              <>
-                <Topbar />
-                <Container fluid>
-                  <div className="content-outer">
-                    <Sidebar />
-                    <Profile />
-                  </div>
-                </Container>
-              </>
-            }
-          />
-          <Route
-            path="/explore"
-            element={
-              <>
-                <Topbar />
-                <Container fluid>
-                  <div className="content-outer">
-                    <Sidebar />
-                    <Explore />
-                  </div>
-                </Container>
-              </>
-            }
-          />
+          <Route path="/dashboard" element={<ProtectedRoute><DashBoard /></ProtectedRoute> } />
+          <Route path="/notification" element={<ProtectedRoute><Notification /></ProtectedRoute>} />
+          <Route path="/postdetail/:id" element={<PostDetail />} />
+          <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+          <Route path="/explore" element={<ProtectedRoute><Explore /></ProtectedRoute>} />
         </Routes>
       </div>
     </Router>

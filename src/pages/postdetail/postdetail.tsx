@@ -1,9 +1,7 @@
 import React from 'react';
-import Topbar from '../topbar/topbar';
-import Sidebar from '../sidebar/sidebar';
-import { Form, FormControl, Button } from 'react-bootstrap';
+import { Form , Button } from 'react-bootstrap';
 import Dropdown from 'react-bootstrap/Dropdown';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import postdetailimg from '../../../src/assets/images/post-detail-img.jpg';
 import likesvg from '../../../src/assets/images/like.svg';
 

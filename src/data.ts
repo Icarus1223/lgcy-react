@@ -97,22 +97,41 @@ export const notificationData = [
 
  export const profileData = [
     {
-    "username": "John Doe",
-    "userImage": "https://example.com/user.jpg",
-    "title": "My Gallery",
-    "images": [
-      {
-        "imageTitle": "Image 1",
-        "imageUrl": "https://example.com/image1.jpg"
-      },
-      {
-        "imageTitle": "Image 2",
-        "imageUrl": "https://example.com/image2.jpg"
-      },
-      {
-        "imageTitle": "Image 3",
-        "imageUrl": "https://example.com/image3.jpg"
-      }
-    ]
-  },
-]
+      id: 1,
+      name: 'John Doe',
+      userImage: 'https://picsum.photos/seed/picsum/200/300',
+      title: 'My Gallery',
+      images: [
+        {
+          id: 1,
+          imageTitle: 'Image 1',
+          imageUrl: 'https://picsum.photos/id/237/200/300',
+          place: 'Place 1',
+          date: '2023-07-06',
+          description: 'Description 1',
+          username: 'Katie Morrison',
+          likes: 10,
+        },
+        {
+          id: 2,
+          imageTitle: 'Image 2',
+          imageUrl: 'https://picsum.photos/200/300/?blur=2',
+          place: 'Place 2',
+          date: '2023-07-07',
+          description: 'Description 2',
+          username: 'Katie Morrison',
+          likes: 15,
+        },
+        {
+          id: 3,
+          imageTitle: 'Image 3',
+          imageUrl: 'https://picsum.photos/200/300?grayscale',
+          place: 'Place 3',
+          date: '2023-07-08',
+          description: 'Description 3',
+          username: 'Katie Morrison',
+          likes: 20,
+        },
+      ],
+    },
+  ];

@@ -1,11 +1,9 @@
 import React from "react";
 import "./dashboard.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import {Container, Row, Col} from "react-bootstrap";
+import { Row, Col} from "react-bootstrap";
 import {Form, Button} from "react-bootstrap";
 import "../../../src/fonts/fonts.css";
-import Topbar from "../topbar/topbar";
-import Sidebar from "../sidebar/sidebar";
 import {postData} from "../../data";
 
 const DashBoard: React.FC = () => {
@@ -96,7 +94,6 @@ const DashBoard: React.FC = () => {
                             </div>
                         </Col>
                     </Row>
-                    <Sidebar />
         </>
     );
 };
