@@ -9,7 +9,7 @@ import likesvg from '../../../src/assets/images/like.svg';
 
 const PostDetail: React.FC = () => {
   return (<>
-    <Container>
+    <Container fluid>
       <div className="content-oute1r">
         <Row className="content-bar-row">
           <Col xs={12} md={12} lg={12} className="main-content">

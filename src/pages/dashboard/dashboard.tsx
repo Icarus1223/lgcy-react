@@ -13,7 +13,7 @@ import Sidebar from '../sidebar/sidebar';
 const DashBoard: React.FC = () => {
   return (<>
     <Topbar />
-    <Container>
+    <Container fluid>
       <div className="content-outer">
         <Row className="content-bar-row">
           <Col xs={12} md={12} lg={12} className="main-content">

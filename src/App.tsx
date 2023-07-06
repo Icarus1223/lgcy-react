@@ -8,6 +8,7 @@ import Notification from './pages/notification/notification';
 import Profile from './pages/profile/profile';
 import PostDetail from './pages/postdetail/postdetail';
 import Explore from './pages/explore/explore';
+import Friends from './pages/friends/friends';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/postdetail" element={<PostDetail />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/explore" element={<Explore />} />
+          <Route path="/friends" element={<Friends />} />
         </Routes>
       </div>
     </Router>
