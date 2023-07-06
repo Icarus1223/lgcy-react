@@ -1,15 +1,12 @@
 import React from 'react';
-import Topbar from '../topbar/topbar';
-import Sidebar from '../sidebar/sidebar';
-import { Form, Button } from 'react-bootstrap';
+import { Container , Form , Button } from 'react-bootstrap';
 import Dropdown from 'react-bootstrap/Dropdown';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import postdetailimg from '../../../src/assets/images/post-detail-img.jpg';
 
 const PostDetail: React.FC = () => {
   return (<>
-    <Container fluid>
-      <div className="content-outer1">
+  <Container fluid>
         <Row className="content-bar-row">
           <Col xs={12} md={12} lg={12} className="main-content">
           <div className="profile-post-detail-outer">
@@ -93,8 +90,7 @@ const PostDetail: React.FC = () => {
             </div>
           </Col>
         </Row>
-      </div>
-    </Container>
+        </Container>
   </>
   );
 };

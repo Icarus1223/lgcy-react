@@ -47,6 +47,8 @@ button.sign-in-btn {
 button.sign-in-btn a {
   color: #fff;
   text-decoration: none;
+  width: 100%;
+    display: block;
 }
 
 .signin-form .input-field input:focus {

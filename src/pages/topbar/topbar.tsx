@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
-import { Form, FormControl, Button } from 'react-bootstrap';
+import { Form, FormControl } from 'react-bootstrap';
 import searchicon from '../../../src/assets/images/search-icon.png';
 import '../../../src/fonts/fonts.css'; // Import the custom fonts CSS file
 
@@ -23,6 +23,7 @@ const Topbar: React.FC = () => {
                 </div>
                 {/* <Button type="submit">Search</Button> */}
               </Form>
+              
             </div>
           </Col>
         </Row>

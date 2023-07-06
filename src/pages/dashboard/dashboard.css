@@ -95,7 +95,7 @@
 /* sidebar css end here */
 /* friends page css start here */
 .friend-main {
-    max-width: 750px;
+    max-width: 600px;
     margin: 0px auto 20px;
 }
 .friend-search-chat .search-bar-form form input {
@@ -181,13 +181,17 @@ p.u-desc {
     margin: 10px 0;
 }
 .all-feeds-lists .feed-uname h4 {
-    font-weight: 600;
+    font-weight: 400;
     font-size: 16px;
     margin-bottom: 0;
     text-align: start;
     color: #000;    
     line-height: 24px;
 
+}
+.all-feeds-lists .feed-uname h4 span{
+    font-weight: 600;
+    margin-right: 6px;
 }
 .feed-comment-outer .feed-comment {
     padding: 0 10px 0px;
@@ -276,16 +280,24 @@ p.u-desc {
 .single-notification {
     display: grid;
     grid-template-columns: 1fr 8fr 1fr;
-    align-items: center;
+    align-items: start;
     margin-bottom: 25px;
     gap: 20px;
 }
 .single-notification .user-profile-pic img.searchicon {
     border-radius: 100px;
+    width: 35px;
+    height: 35px;
+    object-fit: fill;
+}
+.single-notification .post-image img {
+    width: 52px;
+    height: 40px;
+    object-fit: fill;
 }
 .single-notification .user-activity-on-post h6 {
     font-family: 'Montserrat';
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom:0;
     text-align: start;
 }
@@ -301,7 +313,9 @@ p.u-desc {
     margin: 0 auto 30px;
 }
 .profil-img-content .prof-img img {
-    width: 60%;
+    width: 80px;
+    border-radius: 100px;
+    height: 80px;
 }
 .profile-main .profile-heading h5 {
     color: #000;
@@ -330,7 +344,8 @@ p.u-desc {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    text-align: start; 
+    text-align: start;
+    margin-bottom: 0; 
 }
 .profil-img-content {
     display: flex;
@@ -354,17 +369,21 @@ p.u-desc {
     font-weight: 500;
     line-height: normal;
     margin-bottom: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .profile-main .user-activity-image-box {
     display: grid;
-    grid-template-columns: 2fr 2fr;
-    column-gap: 50px;
+    grid-template-columns: 45% 45%;
     row-gap: 40px;
-
+    justify-content: space-between;
 }
 .profile-main .single-box .activity-image img {
     border-radius: 13px;
     max-width: 100%;
+    width: 300px;
+    height: 300px;
+    object-fit: fill;
 }
 /*profile page css end here */
 
@@ -533,6 +552,7 @@ font-weight: 600;
         font-weight: 600;
         line-height: normal;
         text-align: start;
+        width:80%;
     }
     .comment-form .comment-field input:focus{
         box-shadow: none;
@@ -564,9 +584,14 @@ font-weight: 600;
 .explore-main-box{
     margin: 0px auto 20px;
     display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
-    gap: 15px; 
+    grid-template-columns: 33.33% 33.33% 33.33%;
     row-gap: 30px;   
+}
+.explore-main-box .explore-single-img img{
+    width:100%;
+}
+.explore-main-box  .explore-single-box {
+    padding: 0 5px;
 }
 .single-explore-name {
     margin-top: 10px;
@@ -576,6 +601,9 @@ font-weight: 600;
     font-size: 16px;
     margin-bottom: 0;
     text-align: start;
+    overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .single-explore-name span {
@@ -586,7 +614,23 @@ font-weight: 600;
 }
 /* explore  page css end here */
 
+/* media query css start from here */
+@media (max-width: 1200px){
+    .explore-main-box{
+        grid-template-columns: 50% 50%;
+    }
+    .explore-main-area {
+        max-width: 550px;
+    }
+}
+
+@media (max-width: 1024px){
+    .profile-main {
+        max-width: 550px;
+}
+}
 @media (min-width: 992px){
+   
 .sidebar-menu .navbar-expand-lg .navbar-nav {
     flex-direction: column;
 }
@@ -621,20 +665,23 @@ font-weight: 600;
       }
     .menu-bar-row .sidebar{
 width:100%;
+padding: 0;
     }
     .left-side-bar .sidebar-menu {
         margin-top: 0px;
     }
     .site-logo {
         margin-top: 10px;
+        padding-bottom: 10px;
     }
     .content-bar-row{
         position:relative;
-        z-index: -1;
+        margin-top: 160px;
     }
     .left-side-bar .sidebar-menu {
         height: 100%;
         overflow-y: inherit;
+        padding: 0 10px;
     }
     .left-side-bar {
         position: relative;
@@ -656,11 +703,22 @@ button.navbar-toggler.collapsed {
 .sidebar-menu .navbar-nav {
     padding: 0 10px;
 }
-
+.explore-main-area .explore-heading h3{
+    font-size: 24px;
+}
+.notifications-content-area{
+    margin:0px auto 0;
+}
+.all-notifications-lists h3{
+    font-size: 24px;
+}
 }
 @media (max-width: 767px){
 .top-bar{
     max-width: 280px;
+}
+.all-chat-list .single-chat-list-box p.u-desc {
+    font-size: 16px;
 }
 .search-bar-form form input {
     padding: 3px;
@@ -678,10 +736,20 @@ span.navbar-toggler-icon{
 .search-bar-form {
     padding: 15px 0 40px;
 }
-
+.profile-main .user-activity-image-box{
+    grid-template-columns: 100%;
+}
+.profile-main .single-box .activity-content{
+    justify-content: center;
+}
 }
 @media (max-width: 420px){
     .top-bar {
         max-width: 215px;
     }    
+    .single-notification .user-activity-on-post h6{
+        font-size: 14px;
+    }
 }
+
+/* media query css end from here */

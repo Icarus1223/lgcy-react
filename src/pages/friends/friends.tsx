@@ -1,16 +1,11 @@
 import React from 'react';
-import Sidebar from '../sidebar/sidebar';
-import Topbar from '../topbar/topbar';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import { Form, FormControl, Button } from 'react-bootstrap';
 import profileimgcircle from '../../assets/images/profile-img-circle.png';
 
 
 const Friends: React.FC = () => {
   return (<>
-    <Topbar />
-    <Container fluid>
-      <div className="content-outer">
         <Row className="content-bar-row">
           <Col xs={12} md={12} lg={12} className="main-content">
             <div className="friend-main">
@@ -106,10 +101,6 @@ const Friends: React.FC = () => {
             </div>
           </Col>
         </Row>
-        <Sidebar />
-
-      </div>
-    </Container>
   </>
 
   );
