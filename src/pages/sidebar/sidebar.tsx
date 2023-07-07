@@ -13,8 +13,8 @@ const Sidebar: React.FC = () => {
 
     const handleNavbarItemClick = (path: string) => {
         setActiveNavItem(path);
-        navigate(path);
-    };
+        // navigate(path);
+    }
 
     return (
         <Row className="menu-bar-row">
@@ -68,9 +68,9 @@ const Sidebar: React.FC = () => {
                                         Friends
                                     </Nav.Link>
                                     <Nav.Link
-                                        href="/Explore"
-                                        onClick={() => handleNavbarItemClick("/Explore")}
-                                        className={activeNavItem === "/Explore" ? "active" : ""}
+                                        href="/explore"
+                                        onClick={() => handleNavbarItemClick("/explore")}
+                                        className={activeNavItem === "/explore" ? "active" : ""}
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -91,9 +91,9 @@ const Sidebar: React.FC = () => {
                                         Explore
                                     </Nav.Link>
                                     <Nav.Link
-                                        href="/Notification"
-                                        onClick={() => handleNavbarItemClick("/Notification")}
-                                        className={activeNavItem === "/Notification" ? "active" : ""}
+                                        href="/notification"
+                                        onClick={() => handleNavbarItemClick("/notification")}
+                                        className={activeNavItem === "/notification" ? "active" : ""}
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"

@@ -1,8 +1,5 @@
 import React from "react";
-import { Container } from "react-bootstrap";
 import { Navigate } from "react-router-dom";
-import Sidebar from "../../pages/sidebar/sidebar";
-import Topbar from "../../pages/topbar/topbar";
 
 const ProtectedRoute = ({ children }: any) => {
     const token = true;
@@ -12,13 +9,7 @@ const ProtectedRoute = ({ children }: any) => {
       <div>
         {token ? (
           <>
-            <Container fluid>
-              <div className="content-outer y">
-                <Topbar />
                 {memoizedChildren}
-                {/* <Sidebar /> */}
-              </div>
-            </Container>
           </>
         ) : (
           <Navigate to="/" />
