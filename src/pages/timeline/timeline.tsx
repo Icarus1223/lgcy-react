@@ -13,7 +13,7 @@ const Timeline = () => {
         <>
             <Row className="content-bar-row">
                 <Col xs={12} md={12} lg={12} className="main-content">
-                    <div className="profile-main">
+                    <div className=" timeline-pictures profile-main">
                         <div className="profile-heading">
                             <h5>{selectedImage && selectedImage.username}</h5>
                         </div>

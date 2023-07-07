@@ -1,10 +1,10 @@
 import React, {FormEvent} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
-import {Container, Row, Col} from "react-bootstrap"; // Import Container, Row, and Col components
+import {Container, Row, Col} from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import "../../../../src/fonts/fonts.css"; // Import the custom fonts CSS file
+import "../../../../src/fonts/fonts.css";
 import {Link} from "react-router-dom";
 import "../signin/signin.css";
 import logo from "../../../assets/images/logo.png";
@@ -67,9 +67,9 @@ const Signup: React.FC = () => {
                     <div className="signin-container">
                         <Container>
                             <Row className="sign-in-row">
-                                <Col lg={1}></Col>
+                                <Col lg={2}></Col>
 
-                                <Col lg={5}>
+                                <Col lg={4}>
                                     <div className="signin-left">
                                         <div className="signin-logo">
                                             <img src={logo} alt="Logo" className="logo" />
@@ -130,7 +130,7 @@ const Signup: React.FC = () => {
                                         </div>
                                     </div>
                                 </Col>
-                                <Col lg={5}>
+                                <Col lg={4}>
                                     <div className="signin-right">
                                         <div className="share-story-text">
                                             <h1>
@@ -141,7 +141,7 @@ const Signup: React.FC = () => {
                                         </div>
                                     </div>
                                 </Col>
-                                <Col lg={1}></Col>
+                                <Col lg={2}></Col>
                                 <Row>
                                     <Col>
                                         <div className="download-buttons">

@@ -62,7 +62,7 @@ const Topbar: React.FC = () => {
                                             <div
                                                 key={profile.id}
                                                 onClick={() => handleSuggestionClick(profile.id)}
-                                                className="search-suggestion"
+                                                className="search-suggestion-list"
                                             >
                                                 <img src={profile.userImage} alt={profile.name} height="10px" width="10px"/>
                                                 <span>{profile.name}</span>
