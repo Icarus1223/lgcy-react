@@ -3,13 +3,51 @@ import {Form, Button} from "react-bootstrap";
 import Dropdown from "react-bootstrap/Dropdown";
 import {Container, Row, Col} from "react-bootstrap";
 import {useNavigate, useParams} from "react-router-dom";
-import {imageDetailsData} from "../../data";
+import { profileData} from "../../data";
 
 const PostDetail: React.FC = () => {
     const {id}: any = useParams();
     const navigate = useNavigate();
 
-    const imageDetails = imageDetailsData.find((image) => image.id === parseInt(id));
+    const profiles = profileData;
+    let selectedImage:any = null;
+  
+    for (let i = 0; i < profiles.length; i++) {
+      const profile = profiles[i];
+      const images = profile.images;
+  
+      for (let j = 0; j < images.length; j++) {
+        const image = images[j];
+  
+        if (image.id === parseInt(id)) {
+          selectedImage = image;
+          break;
+        }
+  
+        const relatedImages = image.relatedImages;
+        for (let k = 0; k < relatedImages.length; k++) {
+          const relatedImage = relatedImages[k];
+          if (relatedImage.id === parseInt(id)) {
+            selectedImage = relatedImage;
+            break;
+          }
+        }
+  
+        if (selectedImage) {
+          break;
+        }
+      }
+  
+      if (selectedImage) {
+        break;
+      }
+    }
+  
+    if (!selectedImage) {
+      return <div>Image not found</div>;
+    }
+
+    console.log(selectedImage,"selectedImageselectedImage")
 
     const goBack = () => {
         navigate(-1);
@@ -17,6 +55,7 @@ const PostDetail: React.FC = () => {
 
     return (
         <>
+         <div className="content-outer">
             <Container fluid>
                 <Row className="">
                     <Col xs={12} md={12} lg={12} className="main-content post-single-detail">
@@ -37,11 +76,11 @@ const PostDetail: React.FC = () => {
                             </div>
                             <div className="profile-post-detail">
                                 <div className="profile-post-image">
-                                    <img src={imageDetails && imageDetails.imageUrl} alt="profile" />
+                                    <img src={selectedImage && selectedImage.imageUrl} alt="profile" />
                                 </div>
                                 <div className="profile-post-content">
                                     <div className="post-heading">
-                                        <h4>{imageDetails && imageDetails.username} </h4>
+                                        <h4>{selectedImage && selectedImage.username} </h4>
                                         <div className="post-threedot-icon">
                                             <Dropdown>
                                                 <Dropdown.Toggle
@@ -72,11 +111,11 @@ const PostDetail: React.FC = () => {
                                         </div>
                                     </div>
                                     <div className="post-decr">
-                                        <p>{imageDetails && imageDetails.description}</p>
+                                        <p>{selectedImage && selectedImage.description}</p>
                                     </div>
                                     <div className="post-date-place">
                                         <div className="post-info post-date">
-                                            <span>{imageDetails && imageDetails.date} </span>
+                                            <span>{selectedImage && selectedImage.date} </span>
                                         </div>
                                         <div className="post-info post-place">
                                             <span> Venice Beach, California</span>
@@ -88,8 +127,8 @@ const PostDetail: React.FC = () => {
                                         </h6>
                                     </div>
                                     <div className=" all-comment">
-                                        {imageDetails &&
-                                            imageDetails.comments.map((item) => (
+                                        {selectedImage &&
+                                            selectedImage.comments.map((item:any) => (
                                                 <div className="post-caption comment">
                                                     <h6>
                                                         <span>{item.username}</span> {item.text}
@@ -97,12 +136,6 @@ const PostDetail: React.FC = () => {
                                                 </div>
                                             ))}
                                     </div>
-
-                                    {/* <div className="post-comment post-caption">
-                  <div className="single-post-comment">
-                    <h6><span>username</span>  This is the comment.</h6>
-                  </div>
-                </div> */}
                                     <div className="user-comment-footer">
                                         <div className="user-comment-like-outer">
                                             <div className="like-icon">
@@ -120,7 +153,7 @@ const PostDetail: React.FC = () => {
                                                     />
                                                 </svg>
                                             </div>
-                                            <span>{imageDetails && imageDetails.likes} Likes</span>
+                                            <span>{selectedImage && selectedImage.likes} Likes</span>
                                         </div>
                                         <div className="comment-form">
                                             <Form>
@@ -141,6 +174,7 @@ const PostDetail: React.FC = () => {
                     </Col>
                 </Row>
             </Container>
+            </div>
         </>
     );
 };

@@ -31,6 +31,27 @@
     padding: 18px 0 40px;
     cursor: pointer;
 }
+.search-bar-form .search-suggestions {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 10px;
+    position: absolute;
+    top: 35px;
+    left: 0px;
+    width:100%;
+    background-color: #fff;
+}
+.search-bar-form .search-suggestion-list img {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+}
+.search-bar-form .search-suggestion-list {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+    align-items: center;
+    padding-left: 30px;
+}
 .search-bar-form form{
     position: relative;
     max-width: 375px;
@@ -42,11 +63,14 @@
     background: rgba(255, 255, 255, 0.50);
     padding-left: 45px;
     color: rgba(0, 0, 0, 0.50);
-    text-align: center;
+    text-align: start;
     font-size: 16px;
     line-height: normal;
     font-family: 'Montserrat';
     font-size: 18px;
+}
+.search-bar-form form input::placeholder{
+    text-align: center;
 }
 .search-bar-form .search-icon{
     position: absolute;
@@ -99,6 +123,10 @@
     max-width: 600px;
     margin: 0px auto 20px;
 }
+.all-chat-list a{
+    text-decoration:none;
+    color:#000;
+}
 .friend-search-chat .search-bar-form form input {
     padding: 5px 20px;
     border-radius: 50px;
@@ -123,6 +151,7 @@
 }
 .all-chat-list .single-chat-list-box img {
     width: 60px;
+    height:60px;
     border-radius: 100%;
     border: 1px solid #000;
 }
@@ -629,6 +658,18 @@ font-weight: 600;
     display: block;
 }
 /* explore  page css end here */
+
+/* timeline page css start here */
+.timeline-pictures.profile-main .user-activity-image-box{
+    grid-template-columns: 32% 32% 32%;
+}
+.timeline-pictures.profile-main .single-box .activity-image img{
+    border-radius: 0px;
+}
+.timeline-pictures.profile-main .single-box .activity-image img{
+    height: 200px;
+}
+/* timeline page css end here */
 
 /* media query css start from here */
 @media (max-width: 1200px){

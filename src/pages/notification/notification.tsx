@@ -5,6 +5,7 @@ import {notificationData} from "../../data";
 const Notification: React.FC = () => {
     return (
         <>
+         <div className="content-outer">
             <Row className="content-bar-row">
                 <Col xs={12} md={12} lg={12} className="main-content">
                     <div className="notifications-content-area">
@@ -40,6 +41,7 @@ const Notification: React.FC = () => {
                     </div>
                 </Col>
             </Row>
+            </div>
         </>
     );
 };

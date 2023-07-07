@@ -8,7 +8,7 @@ import {postData} from "../../data";
 
 const DashBoard: React.FC = () => {
     return (
-        <>
+        <> <div className="content-outer">
             <Row className="content-bar-row">
                 <Col xs={12} md={12} lg={12} className="main-content">
                     <div className="all-feeds-lists">
@@ -95,6 +95,7 @@ const DashBoard: React.FC = () => {
                     </div>
                 </Col>
             </Row>
+            </div>
         </>
     );
 };
