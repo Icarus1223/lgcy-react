@@ -1,37 +1,36 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import './signin.css';
-import logo from '../../../assets/images/logo.png';
-import playstore from '../../../assets/images/play-store.png';
-import appstore from '../../../assets/images/app-store.png';
-import { setUsername, setPassword, resetForm } from '../../../redux/actions/signinActions';
-import Footer from '../../../components/GlobalComponent/footer/footer';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Row, Col } from 'react-bootstrap'; // Import Container, Row, and Col components
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import '../../../../src/fonts/fonts.css'; // Import the custom fonts CSS file
-import { Link } from 'react-router-dom';
+import React from "react";
+import {useSelector, useDispatch} from "react-redux";
+import "./signin.css";
+import logo from "../../../assets/images/logo.png";
+import playstore from "../../../assets/images/play-store.png";
+import appstore from "../../../assets/images/app-store.png";
+import {setUsername, setPassword, resetForm} from "../../../redux/actions/signinActions";
+import Footer from "../../../components/GlobalComponent/footer/footer";
+import "bootstrap/dist/css/bootstrap.min.css";
+import {Container, Row, Col} from "react-bootstrap";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+import "../../../../src/fonts/fonts.css";
+import {Link} from "react-router-dom";
 
 const Signin: React.FC = () => {
-  const { username, password } = useSelector((state: any) => state.signin);
-  const dispatch = useDispatch();
+    const {username, password} = useSelector((state: any) => state.signin);
+    const dispatch = useDispatch();
 
-  const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    dispatch(setUsername(event.target.value));
-  };
+    const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        dispatch(setUsername(event.target.value));
+    };
 
-  const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    dispatch(setPassword(event.target.value));
-  };
+    const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        dispatch(setPassword(event.target.value));
+    };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    // Handle form submission logic here
-    console.log('Username:', username);
-    console.log('Password:', password);
-    dispatch(resetForm());
-  };
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        console.log("Username:", username);
+        console.log("Password:", password);
+        dispatch(resetForm());
+    };
 
   return (<>
     <div className="signin-outter">

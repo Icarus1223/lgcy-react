@@ -16,7 +16,7 @@ const ProtectedRoute = ({ children }: any) => {
               <div className="content-outer y">
                 <Topbar />
                 {memoizedChildren}
-                {/* <Sidebar /> */}
+               <Sidebar />
               </div>
             </Container>
           </>
