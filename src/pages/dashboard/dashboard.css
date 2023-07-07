@@ -99,6 +99,10 @@
     max-width: 600px;
     margin: 0px auto 20px;
 }
+.all-chat-list a{
+    text-decoration:none;
+    color:#000;
+}
 .friend-search-chat .search-bar-form form input {
     padding: 5px 20px;
     border-radius: 50px;

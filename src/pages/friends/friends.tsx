@@ -2,6 +2,7 @@ import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { Form, FormControl, Button } from 'react-bootstrap';
 import profileimgcircle from '../../assets/images/profile-img-circle.png';
+import { Link } from 'react-router-dom';
 
 
 const Friends: React.FC = () => {
@@ -24,6 +25,7 @@ const Friends: React.FC = () => {
                 </div>
 
                 <div className="all-chat-list">
+                  <Link to="/chats">
                 <div className="single-chat-list-box">
                     <div className="prof-img">
                         <img src={profileimgcircle} alt="profile"/>
@@ -32,7 +34,7 @@ const Friends: React.FC = () => {
                 <p className="u-desc">Welcome to my life adventure</p>
                 </div>
                 </div>
-
+                </Link>
                 <div className="single-chat-list-box">
                     <div className="prof-img">
                         <img src={profileimgcircle} alt="profile"/>

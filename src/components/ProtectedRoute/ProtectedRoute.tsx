@@ -13,10 +13,10 @@ const ProtectedRoute = ({ children }: any) => {
         {token ? (
           <>
             <Container fluid>
-              <div className="content-outer">
+              <div className="content-outer y">
                 <Topbar />
                 {memoizedChildren}
-                <Sidebar />
+                {/* <Sidebar /> */}
               </div>
             </Container>
           </>

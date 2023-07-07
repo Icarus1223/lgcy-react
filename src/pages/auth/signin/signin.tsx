@@ -39,9 +39,9 @@ const Signin: React.FC = () => {
         <div className="signin-container">
           <Container>
             <Row className="sign-in-row">
-              <Col lg={1}>
+              <Col lg={2}>
               </Col>
-              <Col lg={5}>
+              <Col lg={4}>
                 <div className="signin-left">
                   <div className="signin-logo">
                     <img src={logo} alt="Logo" className="logo" />
@@ -63,14 +63,14 @@ const Signin: React.FC = () => {
                       <Button variant="primary" className="sign-in-btn">
                         <Link to="/dashboard" className="link-button">Sign In</Link>
                       </Button>
-                      <div className="signup-link">
+                      {/* <div className="signup-link">
                         <p>Don't have an account? <Link to="/Signup"> Signup</Link></p>
-                      </div>
+                      </div> */}
                     </Form>
                   </div>
                 </div>
               </Col>
-              <Col lg={5}>
+              <Col lg={4}>
                 <div className="signin-right">
                   <div className="share-story-text">
                     <h1>
@@ -79,7 +79,7 @@ const Signin: React.FC = () => {
                   </div>
                 </div>
               </Col>
-              <Col lg={1}>
+              <Col lg={2}>
               </Col>
               <Row>
                 <Col>
