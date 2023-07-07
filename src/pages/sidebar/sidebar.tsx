@@ -110,9 +110,9 @@ const Sidebar: React.FC = () => {
                                         Notification
                                     </Nav.Link>
                                     <Nav.Link
-                                        href="/Profile"
-                                        onClick={() => handleNavbarItemClick("/Profile")}
-                                        className={activeNavItem === "/Profile" ? "active" : ""}
+                                        href="/profile/1"
+                                        onClick={() => handleNavbarItemClick("/profile/1")}
+                                        className={activeNavItem === "/profile/1" ? "active" : ""}
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"

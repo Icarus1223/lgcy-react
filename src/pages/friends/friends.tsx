@@ -1,9 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import {Row, Col} from "react-bootstrap";
 import {Form, FormControl, Button} from "react-bootstrap";
 import profileimgcircle from "../../assets/images/profile-img-circle.png";
+import { friendsData } from "../../data";
 
 const Friends: React.FC = () => {
+    const [searchQuery, setSearchQuery] = useState("");
+
+    const filteredFriends = friendsData.filter((friend) =>
+    friend.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+  
+  //  friend list
+  const friendList = filteredFriends.map((friend, index) => (
+    <div className="single-chat-list-box" key={index}>
+      <div className="prof-img">
+        <img src={friend.image} alt="profile" />
+      </div>
+      <div className="user-small-info">
+        <p className="u-desc">{friend.title}</p>
+      </div>
+    </div>
+  ));
+
     return (
         <>
             <Row className="content-bar-row">
@@ -13,7 +32,10 @@ const Friends: React.FC = () => {
                             <span>Chat</span>
                             <div className="search-bar-form">
                                 <Form className="">
-                                    <FormControl type="text" placeholder="Search" />
+                                    <FormControl type="text" placeholder="Search" 
+                                    value={searchQuery}
+                                    onChange={(e) => setSearchQuery(e.target.value)}
+                                    />
 
                                     {/* <Button type="submit">Search</Button> */}
                                 </Form>
@@ -21,77 +43,7 @@ const Friends: React.FC = () => {
                         </div>
 
                         <div className="all-chat-list">
-                            <div className="single-chat-list-box">
-                                <div className="prof-img">
-                                    <img src={profileimgcircle} alt="profile" />
-                                </div>
-                                <div className="user-small-info">
-                                    <p className="u-desc">Welcome to my life adventure</p>
-                                </div>
-                            </div>
-
-                            <div className="single-chat-list-box">
-                                <div className="prof-img">
-                                    <img src={profileimgcircle} alt="profile" />
-                                </div>
-                                <div className="user-small-info">
-                                    <p className="u-desc">Welcome to my life adventure</p>
-                                </div>
-                            </div>
-
-                            <div className="single-chat-list-box">
-                                <div className="prof-img">
-                                    <img src={profileimgcircle} alt="profile" />
-                                </div>
-                                <div className="user-small-info">
-                                    <p className="u-desc">Welcome to my life adventure</p>
-                                </div>
-                            </div>
-
-                            <div className="single-chat-list-box">
-                                <div className="prof-img">
-                                    <img src={profileimgcircle} alt="profile" />
-                                </div>
-                                <div className="user-small-info">
-                                    <p className="u-desc">Welcome to my life adventure</p>
-                                </div>
-                            </div>
-
-                            <div className="single-chat-list-box">
-                                <div className="prof-img">
-                                    <img src={profileimgcircle} alt="profile" />
-                                </div>
-                                <div className="user-small-info">
-                                    <p className="u-desc">Welcome to my life adventure</p>
-                                </div>
-                            </div>
-
-                            <div className="single-chat-list-box">
-                                <div className="prof-img">
-                                    <img src={profileimgcircle} alt="profile" />
-                                </div>
-                                <div className="user-small-info">
-                                    <p className="u-desc">Welcome to my life adventure</p>
-                                </div>
-                            </div>
-
-                            <div className="single-chat-list-box">
-                                <div className="prof-img">
-                                    <img src={profileimgcircle} alt="profile" />
-                                </div>
-                                <div className="user-small-info">
-                                    <p className="u-desc">Welcome to my life adventure</p>
-                                </div>
-                            </div>
-
-                            <div className="single-chat-list-box">
-                                <div className="prof-img">
-                                    <img src={profileimgcircle} alt="profile" />
-                                </div>
-                                <div className="user-small-info">
-                                    <p className="u-desc">Welcome to my life adventure</p>
-                                </div>
-                            </div>
+                        {friendList}
                         </div>
                     </div>
                 </Col>

@@ -11,6 +11,7 @@ import Profile from './pages/profile/profile';
 import Explore from './pages/explore/explore';
 import Signup from './pages/auth/signup/Signup';
 import Friends from './pages/friends/friends';
+import Timeline from './pages/timeline/timeline';
 
 function App() {
   return (
@@ -22,7 +23,9 @@ function App() {
           <Route path="/dashboard" element={<ProtectedRoute><DashBoard /></ProtectedRoute> } />
           <Route path="/notification" element={<ProtectedRoute><Notification /></ProtectedRoute>} />
           <Route path="/postdetail/:id" element={<PostDetail />} />
-          <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+          <Route path="/timeline/:id" element={<ProtectedRoute><Timeline /></ProtectedRoute>} />
+          {/* <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} /> */}
+          <Route path="/profile/:id" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
           <Route path="/explore" element={<ProtectedRoute><Explore /></ProtectedRoute>} />
           <Route path="/friends" element={<ProtectedRoute><Friends /></ProtectedRoute>} />
         </Routes>
