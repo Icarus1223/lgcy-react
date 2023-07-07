@@ -1,27 +1,31 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import {Row, Col} from "react-bootstrap";
 import {Form, FormControl, Button} from "react-bootstrap";
-import profileimgcircle from "../../assets/images/profile-img-circle.png";
-import { friendsData } from "../../data";
+import { useNavigate } from "react-router-dom";
+import {friendsData} from "../../data";
 
 const Friends: React.FC = () => {
     const [searchQuery, setSearchQuery] = useState("");
-
+    const navigate = useNavigate();
     const filteredFriends = friendsData.filter((friend) =>
-    friend.title.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-  
-  //  friend list
-  const friendList = filteredFriends.map((friend, index) => (
-    <div className="single-chat-list-box" key={index}>
-      <div className="prof-img">
-        <img src={friend.image} alt="profile" />
-      </div>
-      <div className="user-small-info">
-        <p className="u-desc">{friend.title}</p>
-      </div>
-    </div>
-  ));
+        friend.title.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+
+    const handleClick = () => {
+        navigate("/chat");
+    };
+
+    //  friend list
+    const friendList = filteredFriends.map((friend, index) => (
+        <div className="single-chat-list-box" key={index}>
+            <div className="prof-img">
+                <img src={friend.image} alt="profile" />
+            </div>
+            <div className="user-small-info" onClick={handleClick}>
+                <p className="u-desc">{friend.title}</p>
+            </div>
+        </div>
+    ));
 
     return (
         <>
@@ -32,9 +36,11 @@ const Friends: React.FC = () => {
                             <span>Chat</span>
                             <div className="search-bar-form">
                                 <Form className="">
-                                    <FormControl type="text" placeholder="Search" 
-                                    value={searchQuery}
-                                    onChange={(e) => setSearchQuery(e.target.value)}
+                                    <FormControl
+                                        type="text"
+                                        placeholder="Search"
+                                        value={searchQuery}
+                                        onChange={(e) => setSearchQuery(e.target.value)}
                                     />
 
                                     {/* <Button type="submit">Search</Button> */}
@@ -42,9 +48,7 @@ const Friends: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="all-chat-list">
-                        {friendList}
-                        </div>
+                        <div className="all-chat-list">{friendList}</div>
                     </div>
                 </Col>
             </Row>

@@ -4,17 +4,15 @@ import {Row, Col} from "react-bootstrap";
 import logo from "../../../src/assets/images/logo.png";
 import {Navbar, Nav} from "react-bootstrap";
 import "../../../src/fonts/fonts.css";
-import {useLocation, useNavigate} from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Sidebar: React.FC = () => {
     const location = useLocation();
-    const navigate = useNavigate();
     const [activeNavItem, setActiveNavItem] = useState(location.pathname);
 
     const handleNavbarItemClick = (path: string) => {
         setActiveNavItem(path);
-        // navigate(path);
-    }
+    };
 
     return (
         <Row className="menu-bar-row">
@@ -29,9 +27,10 @@ const Sidebar: React.FC = () => {
                             <Navbar.Collapse id="basic-navbar-nav">
                                 <Nav className="me-auto">
                                     <Nav.Link
-                                        href="/dashboard"
+                                        as={NavLink}
+                                        to="/dashboard"
                                         onClick={() => handleNavbarItemClick("/dashboard")}
-                                        className={activeNavItem === "/dashboard" ? "active" : ""}
+                                        className={`nav-link ${activeNavItem === "/dashboard" ? "active" : ""}`}
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +48,8 @@ const Sidebar: React.FC = () => {
                                     </Nav.Link>
 
                                     <Nav.Link
-                                        href="/friends"
+                                        as={NavLink}
+                                        to="/friends"
                                         onClick={() => handleNavbarItemClick("/friends")}
                                         className={activeNavItem === "/friends" ? "active" : ""}
                                     >
@@ -68,7 +68,8 @@ const Sidebar: React.FC = () => {
                                         Friends
                                     </Nav.Link>
                                     <Nav.Link
-                                        href="/explore"
+                                        as={NavLink}
+                                        to="/explore"
                                         onClick={() => handleNavbarItemClick("/explore")}
                                         className={activeNavItem === "/explore" ? "active" : ""}
                                     >
@@ -91,7 +92,8 @@ const Sidebar: React.FC = () => {
                                         Explore
                                     </Nav.Link>
                                     <Nav.Link
-                                        href="/notification"
+                                        as={NavLink}
+                                        to="/notification"
                                         onClick={() => handleNavbarItemClick("/notification")}
                                         className={activeNavItem === "/notification" ? "active" : ""}
                                     >
@@ -110,7 +112,8 @@ const Sidebar: React.FC = () => {
                                         Notification
                                     </Nav.Link>
                                     <Nav.Link
-                                        href="/profile/1"
+                                        as={NavLink}
+                                        to="/profile/1"
                                         onClick={() => handleNavbarItemClick("/profile/1")}
                                         className={activeNavItem === "/profile/1" ? "active" : ""}
                                     >
@@ -131,7 +134,8 @@ const Sidebar: React.FC = () => {
                                         Profile
                                     </Nav.Link>
                                     <Nav.Link
-                                        href="/"
+                                        as={NavLink}
+                                        to="/"
                                         onClick={() => handleNavbarItemClick("/SignOut")}
                                         className={activeNavItem === "/SignOut" ? "active" : ""}
                                     >

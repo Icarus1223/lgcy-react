@@ -10,6 +10,7 @@ const Profile: React.FC = () => {
 
     return (
         <>
+         <div className="content-outer">
             <Row className="content-bar-row">
                 <Col xs={12} md={12} lg={12} className="main-content">
                     <div className="profile-main">
@@ -42,6 +43,7 @@ const Profile: React.FC = () => {
                     </div>
                 </Col>
             </Row>
+            </div>
         </>
     );
 };

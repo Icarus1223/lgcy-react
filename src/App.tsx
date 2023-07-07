@@ -20,7 +20,8 @@ function App() {
     const location = useLocation();
     const isProfilePage = location.pathname.startsWith("/profile");
     const isTimelinePage = location.pathname.startsWith("/timeline");
-    const isFixedTopbar = isProfilePage || isTimelinePage;
+    const isChatPage = location.pathname.startsWith("/chat");
+    const isFixedTopbar = isProfilePage || isTimelinePage ;
     const isFixedSidebar =
         isFixedTopbar ||
         ["/dashboard", "/notification", "/postdetail/:id", "/timeline/:id", "/explore", "/friends"].includes(
@@ -30,9 +31,9 @@ function App() {
     return (
         <div className="App">
             <Container fluid>
-                <div className="content-outer">
                     {isFixedTopbar && <Topbar />}
                     {isFixedSidebar && <Topbar />}
+                    {isChatPage &&  <Topbar />}
                     <Routes>
                         <Route path="/" element={<Signin />} />
                         <Route path="/signup" element={<Signup />} />
@@ -46,7 +47,6 @@ function App() {
                         <Route path="/chat" element={<Chats />} />
                     </Routes>
                     {isFixedSidebar && <Sidebar />}
-                </div>
             </Container>
         </div>
     );

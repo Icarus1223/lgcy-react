@@ -11,6 +11,7 @@ const Timeline = () => {
 
     return (
         <>
+        <div className="content-outer">
             <Row className="content-bar-row">
                 <Col xs={12} md={12} lg={12} className="main-content">
                     <div className=" timeline-pictures profile-main">
@@ -44,6 +45,7 @@ const Timeline = () => {
                     </div>
                 </Col>
             </Row>
+            </div>
         </>
     );
 };

@@ -5,6 +5,7 @@ import {exploreData} from "../../data";
 const Explore: React.FC = () => {
     return (
         <>
+         <div className="content-outer">
             <Row className="content-bar-row">
                 <Col xs={12} md={12} lg={12} className="main-content">
                     <div className="explore-main-area">
@@ -27,6 +28,7 @@ const Explore: React.FC = () => {
                     </div>
                 </Col>
             </Row>
+            </div>
         </>
     );
 };

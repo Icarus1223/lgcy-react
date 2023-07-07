@@ -55,6 +55,7 @@ const PostDetail: React.FC = () => {
 
     return (
         <>
+         <div className="content-outer">
             <Container fluid>
                 <Row className="">
                     <Col xs={12} md={12} lg={12} className="main-content post-single-detail">
@@ -173,6 +174,7 @@ const PostDetail: React.FC = () => {
                     </Col>
                 </Row>
             </Container>
+            </div>
         </>
     );
 };
