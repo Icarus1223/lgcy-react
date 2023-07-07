@@ -12,6 +12,7 @@ import Explore from './pages/explore/explore';
 import Signup from './pages/auth/signup/Signup';
 import Friends from './pages/friends/friends';
 import Timeline from './pages/timeline/timeline';
+import Chats from './pages/friends/chat';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/profile/:id" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
           <Route path="/explore" element={<ProtectedRoute><Explore /></ProtectedRoute>} />
           <Route path="/friends" element={<ProtectedRoute><Friends /></ProtectedRoute>} />
+          <Route path="/chats" element={<ProtectedRoute><Chats /></ProtectedRoute>} />
         </Routes>
       </div>
     </Router>
